@@ -1,0 +1,159 @@
+version: "3.1"
+nlu:
+- intent: ask_about_activities # Hỏi về các hoạt động giải trí
+  examples: |
+    - Khu du lịch này có những hoạt động giải trí nào không?
+    - Tôi có thể tham gia các hoạt động gì khi đến đây?
+    - Có chương trình sự kiện nào diễn ra trong thời gian tôi ở đây không?
+    - Có các hoạt động thể thao nào được tổ chức không?
+    - Tôi có thể tham gia các tour khám phá nào không?
+    - Có hoạt động nào phù hợp cho trẻ em không?
+    - Có các hoạt động văn hóa nào diễn ra không?
+    - Có cơ hội nào để tham gia vào các lớp học nghệ thuật không?
+    - Có những hoạt động ngoài trời nào được tổ chức không?
+    - Tôi có thể tìm thấy các hoạt động giải trí ban đêm không?
+    - Có các dịch vụ giải trí nào tại khu nghỉ dưỡng không?
+    - Khu du lịch có cung cấp các tour du lịch khám phá không?
+    - Có hoạt động nào giúp tôi tìm hiểu về văn hóa địa phương không?
+    - Tôi có thể tham gia các trò chơi hoặc cuộc thi không?
+    - Có hoạt động nào dành cho người lớn tuổi không?
+
+# - intent: ask_about_hiking_trails # Hỏi về các tour đi leo núi
+#   examples: |
+#     - Khu du lịch có những đường mòn leo núi nào không?
+#     - Tôi có thể tìm thấy các tuyến đường đi bộ nào ở đây?
+#     - Có thông tin gì về độ khó của các đường mòn không?
+#     - Có bản đồ đường mòn leo núi không?
+#     - Thời gian lý tưởng để đi leo núi ở khu vực này là khi nào?
+#     - Có hướng dẫn viên nào cho các chuyến đi bộ không?
+#     - Có các hoạt động nào liên quan đến leo núi không?
+#     - Khu vực này có các đường mòn phù hợp cho người mới bắt đầu không?
+#     - Tôi cần chuẩn bị gì khi đi leo núi ở đây?
+#     - Có những địa điểm nào nổi bật trên các đường mòn không?
+#     - Có thông tin gì về an toàn khi leo núi không?
+#     - Có các tour tổ chức đi leo núi không?
+#     - Thời tiết có ảnh hưởng đến việc đi leo núi không?
+#     - Có các điểm dừng chân nào trên đường mòn không?
+#     - Có thể đi leo núi vào mùa đông không?
+
+# - intent: ask_about_nightlife # Hỏi về các hoạt động ban đêm
+#   examples: |
+#     - Khu du lịch có những hoạt động ban đêm nào không?
+#     - Tôi có thể làm gì vào buổi tối ở đây?
+#     - Có các sự kiện nào diễn ra vào ban đêm không?
+#     - Có quán bar hoặc câu lạc bộ nào gần đây không?
+#     - Có các hoạt động giải trí nào dành cho người lớn vào ban đêm không?
+#     - Tôi có thể tìm thấy những địa điểm nào thú vị để khám phá vào ban đêm?
+#     - Có chương trình biểu diễn nghệ thuật nào vào buổi tối không?
+#     - Có những địa điểm nào tốt để thưởng thức ẩm thực vào ban đêm không?
+#     - Khu du lịch có tổ chức tour ban đêm không?
+#     - Có thể tham gia các hoạt động thể thao vào buổi tối không?
+#     - Có những biện pháp an toàn nào khi tham gia hoạt động ban đêm không?
+#     - Có các sự kiện văn hóa nào diễn ra vào ban đêm không?
+#     - Tôi có thể tìm thấy nhạc sống hoặc biểu diễn nào không?
+#     - Có các hoạt động nào dành cho gia đình vào ban đêm không?
+#     - Có các điểm tham quan nào đẹp vào ban đêm không?
+
+- intent: ask_about_events # Hỏi về các sự kiện văn hóa
+  examples: |
+    - Khu du lịch có các sự kiện văn hóa nào diễn ra không?
+    - Tôi có thể tham gia vào những sự kiện văn hóa nào khi đến đây?
+    - Có thông tin gì về lễ hội địa phương không?
+    - Có chương trình nào giới thiệu văn hóa địa phương không?
+    - Tôi có thể tìm thấy lịch trình sự kiện văn hóa ở đâu?
+    - Có những hoạt động nào liên quan đến văn hóa diễn ra trong tuần này không?
+    - Có các buổi biểu diễn nghệ thuật nào không?
+    - Có các hoạt động nào giúp tôi tìm hiểu về truyền thống địa phương không?
+    - Khu du lịch có tổ chức các sự kiện giao lưu văn hóa không?
+    - Có thể tham gia các lễ hội nào trong thời gian tôi ở đây không?
+    - Có các hoạt động nào cho trẻ em liên quan đến văn hóa không?
+    - Tôi có thể tìm hiểu về phong tục tập quán của người dân địa phương không?
+    - Có các tour tổ chức tham quan sự kiện văn hóa không?
+    - Có thông tin gì về các nghệ sĩ địa phương không?
+    - Có các hội chợ văn hóa nào diễn ra không?
+
+# - intent: ask_about_scenic_drives # Hỏi về các view ngắm cảnh
+#   examples: |
+#     - Khu du lịch có những tuyến đường ngắm cảnh nào không?
+#     - Tôi có thể lái xe qua những địa điểm nào đẹp ở đây?
+#     - Có bản đồ các tuyến đường ngắm cảnh không?
+#     - Đường nào là tốt nhất để ngắm cảnh trong khu vực này?
+#     - Có những điểm dừng chân nào trên các tuyến đường ngắm cảnh không?
+#     - Có thể tổ chức tour ngắm cảnh bằng ô tô không?
+#     - Thời gian lái xe qua các tuyến đường ngắm cảnh là bao lâu?
+#     - Có các biện pháp an toàn nào khi lái xe trên đường ngắm cảnh không?
+#     - Tôi có thể tìm thấy các điểm tham quan nổi bật dọc đường không?
+#     - Có các hoạt động nào khác dọc theo các tuyến đường ngắm cảnh không?
+#     - Có thể lái xe vào mùa đông không?
+#     - Có những điểm nào tốt để chụp ảnh trên các tuyến đường ngắm cảnh không?
+#     - Có các bài hướng dẫn lái xe qua các tuyến đường ngắm cảnh không?
+#     - Có thông tin gì về độ khó hoặc tình trạng đường không?
+#     - Có thể tìm thấy các tuyến đường ngắm cảnh phù hợp cho gia đình không?
+
+# - intent: ask_about_fitness_activities # Hỏi về các hoạt động thể dục thể thao
+#   examples: |
+#     - Khu du lịch có các hoạt động thể dục thể thao nào không?
+#     - Tôi có thể tham gia các lớp thể dục ở đây không?
+#     - Có những môn thể thao nào được tổ chức tại khu vực này?
+#     - Có sân thể thao hoặc phòng gym nào không?
+#     - Có các hoạt động nào dành cho người yêu thích thể thao không?
+#     - Có hướng dẫn viên nào cho các hoạt động thể dục không?
+#     - Tôi có thể tham gia vào các giải đấu thể thao nào không?
+#     - Có các hoạt động thể chất nào dành cho trẻ em không?
+#     - Có thể thuê thiết bị thể thao ở đây không?
+#     - Có các chương trình sức khỏe hoặc wellness nào không?
+#     - Có các lớp học yoga hoặc pilates không?
+#     - Có thể tìm thấy các địa điểm chạy bộ hoặc đi bộ không?
+#     - Có các hoạt động thể dục nào tổ chức vào buổi tối không?
+#     - Có thông tin gì về an toàn khi tham gia các hoạt động thể thao không?
+#     - Có các tour tổ chức hoạt động thể dục thể thao không?
+
+# - intent: ask_about_water_activities # Hỏi về các hoạt động dưới nước
+#   examples: |
+#     - Khu du lịch có các hoạt động dưới nước nào không?
+#     - Tôi có thể tham gia các môn thể thao dưới nước ở đây không?
+#     - Có những hoạt động giải trí nào liên quan đến nước không?
+#     - Có thể thuê thiết bị lặn hoặc chèo thuyền không?
+#     - Có các tour tổ chức hoạt động dưới nước không?
+#     - Có các lớp học bơi hoặc lặn không?
+#     - Tôi có thể tìm thấy bãi biển hoặc hồ bơi nào không?
+#     - Có thông tin gì về các biện pháp an toàn khi tham gia hoạt động dưới nước không?
+#     - Có các chương trình giải trí nào diễn ra trên mặt nước không?
+#     - Có thể tham gia vào các giải đấu thể thao dưới nước không?
+#     - Có các hoạt động nào dành cho trẻ em liên quan đến nước không?
+#     - Có các hoạt động thư giãn nào trên nước không?
+#     - Có thể tìm thấy các địa điểm lặn đẹp ở gần đây không?
+#     - Có thông tin gì về thời gian và lịch trình cho các hoạt động dưới nước không?
+#     - Có các dịch vụ nào liên quan đến chăm sóc sức khỏe sau khi tham gia hoạt động dưới nước không?
+
+# - intent: ask_about_family_friendly_activities # Hỏi về hoạt động dành cho trẻ em
+#   examples: |
+#     - Khu du lịch có các hoạt động thân thiện với gia đình nào không?
+#     - Có những trò chơi nào dành cho trẻ em không?
+#     - Tôi có thể tham gia các hoạt động gì cùng gia đình ở đây?
+#     - Có khu vui chơi cho trẻ em không?
+#     - Có các sự kiện nào phù hợp cho cả gia đình không?
+#     - Có thể tổ chức picnic hoặc hoạt động ngoài trời cho gia đình không?
+#     - Có thông tin gì về các tour dành cho gia đình không?
+#     - Có các lớp học hoặc hoạt động giáo dục nào cho trẻ em không?
+#     - Có dịch vụ chăm sóc trẻ em nào không?
+#     - Có các trò chơi hoặc hoạt động giải trí nào cho trẻ em không?
+#     - Có thể tìm thấy các địa điểm ngắm cảnh phù hợp với gia đình không?
+#     - Có các hoạt động thể dục thể thao nào cho trẻ em không?
+#     - Có thông tin gì về an toàn cho các hoạt động dành cho trẻ em không?
+#     - Có các chương trình biểu diễn nào dành cho trẻ em không?
+#     - Có các tour tổ chức tham quan dành cho gia đình không?
+
+# - intent: ask_about_wildlife_sightings
+#   examples: |
+#     - Tôi có thể thấy những loài động vật hoang dã nào ở đây?
+#     - Có khu vực nào nổi tiếng với việc ngắm động vật hoang dã không?
+#     - Có thông tin gì về các loài động vật hoang dã trong khu vực này không?
+#     - Tôi có thể đi tour để ngắm động vật hoang dã không?
+#     - Có thời gian nào tốt nhất để thấy động vật hoang dã không?
+#     - Có những loại động vật nào được bảo tồn ở khu vực này?
+#     - Có thể gặp những loài động vật hoang dã nào vào ban đêm?
+#     - Có những biện pháp nào để bảo vệ động vật hoang dã trong khu vực không?
+#     - Tôi có thể tìm thấy các địa điểm để ngắm động vật hoang dã ở đâu?
+#     - Có sự kiện nào liên quan đến động vật hoang dã không?
+

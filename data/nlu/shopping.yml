@@ -1,0 +1,28 @@
+# version: "3.1"
+# nlu:
+
+# - intent: ask_about_shopping_malls #Hỏi về các trung tâm mua sắm.
+#   examples: |
+#     - Có trung tâm mua sắm nào gần đây không?
+#     - Tôi có thể tìm thấy những trung tâm mua sắm nào ở khu vực này?
+#     - Trung tâm mua sắm nào lớn nhất ở đây?
+#     - Có cửa hàng nào nổi tiếng trong các trung tâm mua sắm không?
+#     - Giờ mở cửa của trung tâm mua sắm là gì?
+#     - Có các thương hiệu quốc tế nào trong trung tâm mua sắm không?
+#     - Có trung tâm mua sắm nào có khu ẩm thực không?
+#     - Tôi có thể đi đến trung tâm mua sắm bằng phương tiện công cộng không?
+#     - Có chương trình khuyến mãi nào tại trung tâm mua sắm không?
+#     - Có trung tâm mua sắm nào tổ chức sự kiện không?
+
+# - intent: ask_about_souvenir_shops #Hỏi về các cửa hàng quà lưu niệm.
+#   examples: |
+#     - Có cửa hàng quà lưu niệm nào gần đây không?
+#     - Tôi nên mua quà lưu niệm ở đâu?
+#     - Cửa hàng quà lưu niệm nào bán hàng chất lượng tốt?
+#     - Có các mặt hàng đặc sản nào trong cửa hàng quà lưu niệm không?
+#     - Giờ mở cửa của cửa hàng quà lưu niệm là gì?
+#     - Có cửa hàng quà lưu niệm nào bán đồ thủ công không?
+#     - Tôi có thể tìm thấy quà lưu niệm ở khu vực nào?
+#     - Có chương trình khuyến mãi nào tại cửa hàng quà lưu niệm không?
+#     - Tôi có thể đặt hàng quà lưu niệm trực tuyến không?
+#     - Có cửa hàng nào chuyên về quà lưu niệm địa phương không?

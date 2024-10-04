@@ -1,0 +1,54 @@
+# version: "3.1"
+
+# nlu:
+# - intent: ask_about_local_guides #Hỏi về hướng dẫn viên địa phương.
+#   examples: |
+#     - Có hướng dẫn viên địa phương nào không?
+#     - Tôi có thể thuê hướng dẫn viên địa phương ở đâu?
+#     - Hướng dẫn viên có biết nói tiếng Anh không?
+#     - Có hướng dẫn viên nào có kinh nghiệm không?
+#     - Tôi có thể liên hệ với hướng dẫn viên nào?
+#     - Hướng dẫn viên có thể đưa tôi đi tham quan những đâu?
+#     - Có hướng dẫn viên nào chuyên về lịch sử không?
+#     - Tôi có thể đặt hướng dẫn viên trước không?
+#     - Hướng dẫn viên có thể tổ chức tour riêng không?
+#     - Chi phí thuê hướng dẫn viên địa phương là bao nhiêu?
+
+# - intent: ask_about_guided_tours #Hỏi về các tour có hướng dẫn.
+#   examples: |
+#     - Có tour có hướng dẫn nào sẵn có không?
+#     - Tôi muốn tham gia tour có hướng dẫn, bạn có đề xuất nào không?
+#     - Tour có hướng dẫn thường kéo dài bao lâu?
+#     - Có tour nào phù hợp cho gia đình không?
+#     - Tôi có thể đặt tour có hướng dẫn trước không?
+#     - Có tour nào khám phá văn hóa địa phương không?
+#     - Có tour nào miễn phí không?
+#     - Thời gian bắt đầu tour có hướng dẫn là khi nào?
+#     - Có tour nào chỉ diễn ra vào cuối tuần không?
+#     - Tôi có thể tham gia tour có hướng dẫn vào tháng tới không?
+
+# - intent: ask_about_hiking_guides #Hỏi về hướng dẫn leo núi.
+#   examples: |
+#     - Có hướng dẫn viên nào chuyên về leo núi không?
+#     - Tôi có thể tìm hướng dẫn viên leo núi ở đâu?
+#     - Hướng dẫn viên có thể giúp tôi chọn đường mòn không?
+#     - Chi phí cho một buổi hướng dẫn leo núi là bao nhiêu?
+#     - Hướng dẫn viên có kinh nghiệm trong việc dẫn tour leo núi không?
+#     - Có tour leo núi nào phù hợp cho người mới bắt đầu không?
+#     - Hướng dẫn viên có thể dẫn tôi đi trong bao lâu?
+#     - Tôi có thể tham gia tour leo núi vào cuối tuần không?
+#     - Có cần chuẩn bị gì trước khi tham gia tour leo núi không?
+#     - Hướng dẫn viên có thể cung cấp thiết bị leo núi không?
+
+# - intent: ask_about_private_tours #Hỏi về tour riêng
+#   examples: |
+#     - Có tour riêng nào tôi có thể đặt không?
+#     - Chi phí cho tour riêng là bao nhiêu?
+#     - Tôi có thể tùy chỉnh tour riêng theo ý muốn không?
+#     - Thời gian cho tour riêng thường kéo dài bao lâu?
+#     - Có hướng dẫn viên nào cho tour riêng không?
+#     - Tôi có thể tổ chức tour riêng cho một nhóm không?
+#     - Có tour riêng nào phù hợp cho gia đình không?
+#     - Có thể kết hợp nhiều địa điểm trong tour riêng không?
+#     - Tôi cần đặt tour riêng trước bao lâu?
+#     - Có thể tham gia tour riêng vào ngày nào?

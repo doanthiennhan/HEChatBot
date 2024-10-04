@@ -1,0 +1,99 @@
+# version: "3.1"
+
+# nlu:
+
+
+# - intents: ask_about_ticket_prices # hỏi về giá
+#   examples: |
+#     - Giá vé vào cổng là bao nhiêu?
+#     - Tôi muốn biết giá vé cho người lớn và trẻ em.
+#     - Có giá vé nào khác nhau cho các ngày khác nhau không?
+#     - Có khuyến mãi nào cho giá vé không?
+#     - Tôi có thể mua vé trực tuyến không?
+#     - Có giảm giá cho nhóm không?
+#     - Giá vé cho người cao tuổi là bao nhiêu?
+#     - Có giá vé nào cho sinh viên không?
+#     - Tôi muốn biết thông tin về các loại vé khác nhau.
+#     - Có thể thanh toán vé bằng cách nào?
+#     - Tôi cần biết giá vé cho các hoạt động trong khu du lịch.
+#     - Giá vé có bao gồm các dịch vụ nào không?
+#     - Có thể trả lại vé nếu không sử dụng không?
+#     - Có thời hạn nào cho giá vé không?
+#     - Có phí nào khác ngoài giá vé không?
+
+
+# - intents: ask_about_room_prices #Hỏi về giá phòng
+#   examples: |
+#     - Giá phòng là bao nhiêu?
+#     - Tôi muốn biết giá phòng cho một đêm.
+#     - Có giá phòng nào khác nhau cho các loại phòng không?
+#     - Có khuyến mãi nào cho giá phòng không?
+#     - Tôi có thể đặt phòng trực tuyến không?
+#     - Giá phòng cho người lớn và trẻ em có khác nhau không?
+#     - Có giảm giá cho nhóm không?
+#     - Tôi cần biết giá phòng cho cuối tuần.
+#     - Có bao gồm bữa sáng trong giá phòng không?
+#     - Tôi muốn biết giá phòng cho các ngày lễ.
+#     - Giá phòng có thể thay đổi theo mùa không?
+#     - Có thể trả lại tiền nếu tôi hủy đặt phòng không?
+#     - Có phí nào khác ngoài giá phòng không?
+#     - Tôi có thể thanh toán giá phòng bằng cách nào?
+#     - Giá phòng cho phòng VIP là bao nhiêu?
+
+# - intents: ask_about_special_offers #Hỏi về các chương trình khuyến mãi.
+#   examples: |
+#     - Có chương trình khuyến mãi nào hiện tại không?
+#     - Tôi muốn biết về các ưu đãi đặc biệt.
+#     - Có giảm giá cho khách hàng lần đầu không?
+#     - Có ưu đãi nào cho nhóm lớn không?
+#     - Tôi có thể nhận được thông tin về khuyến mãi qua email không?
+#     - Có khuyến mãi cho các dịp lễ không?
+#     - Có thể kết hợp nhiều chương trình khuyến mãi không?
+#     - Tôi muốn biết thông tin về ưu đãi cuối tuần.
+#     - Có chương trình tích điểm cho khách hàng không?
+#     - Có ưu đãi nào cho các dịch vụ đi kèm không?
+#     - Giá phòng có thể giảm giá theo thời gian không?
+#     - Tôi có thể kiểm tra chương trình khuyến mãi trên website không?
+#     - Có bất kỳ khuyến mãi nào cho dịch vụ ăn uống không?
+#     - Có ưu đãi nào cho khách hàng thân thiết không?
+#     - Tôi có thể tham gia chương trình khuyến mãi bằng cách nào?
+
+# - intents: ask_about_group_discounts #Hỏi về giảm giá cho đoàn.
+#   examples: |
+#     - Có giảm giá cho đoàn không?
+#     - Tôi muốn biết về chính sách giảm giá cho nhóm.
+#     - Có mức giá nào đặc biệt cho đoàn lớn không?
+#     - Tôi cần thông tin về giảm giá khi đặt cho nhiều phòng.
+#     - Có yêu cầu tối thiểu để được giảm giá cho nhóm không?
+#     - Thời gian nào áp dụng giảm giá cho đoàn?
+#     - Tôi có thể nhận được bao nhiêu phần trăm giảm giá cho đoàn?
+#     - Có cần phải đặt trước để nhận giảm giá cho nhóm không?
+#     - Có chương trình khuyến mãi nào cho đoàn không?
+#     - Tôi có thể đặt vé cho đoàn qua mạng không?
+#     - Có chiết khấu nào cho dịch vụ đi kèm khi đặt cho đoàn không?
+#     - Có thể chia sẻ thông tin giảm giá cho nhóm qua email không?
+#     - Quy trình đặt chỗ cho đoàn có khác gì không?
+#     - Có hỗ trợ nào cho đoàn khi đến khu du lịch không?
+#     - Tôi cần liên hệ ai để biết thêm về giảm giá cho đoàn?
+
+# - intents: ask_about_discount_codes #Hỏi về mã giảm giá
+#   examples: |
+#     - Có mã giảm giá nào hiện tại không?
+#     - Tôi có thể tìm mã giảm giá ở đâu?
+#     - Làm thế nào để sử dụng mã giảm giá?
+#     - Có thể áp dụng mã giảm giá cho tất cả các dịch vụ không?
+#     - Có thời hạn nào cho mã giảm giá không?
+#     - Tôi có thể nhận mã giảm giá qua email không?
+#     - Có mã giảm giá đặc biệt cho khách hàng lần đầu không?
+#     - Tôi cần biết mã giảm giá cho mùa lễ hội.
+#     - Có yêu cầu gì để có được mã giảm giá không?
+#     - Tôi có thể sử dụng nhiều mã giảm giá cho một lần đặt không?
+#     - Có thể áp dụng mã giảm giá cho giá vé không?
+#     - Tôi đã nhập mã giảm giá nhưng không hoạt động, phải làm sao?
+#     - Có mã giảm giá nào cho dịch vụ ăn uống không?
+#     - Ai có thể giúp tôi nếu tôi gặp vấn đề với mã giảm giá?
+#     - Tôi có thể chia sẻ mã giảm giá với bạn bè không?
+
+
+
+  

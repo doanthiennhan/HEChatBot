@@ -1,0 +1,94 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - chào
+    - xin chào
+    - chào bạn
+    - chào buổi sáng
+    - chào buổi tối
+    - chào buổi chiều
+    - chào cậu
+    - chào anh
+    - xin chào buổi sáng
+    - xin chào buổi chiều
+    - xin chào buổi tối
+    - chào mừng
+    - chào buổi sáng bạn
+
+- intent: goodbye
+  examples: |
+    - tạm biệt
+    - chào tạm biệt
+    - hẹn gặp lại
+    - chúc ngủ ngon
+    - chào nhé
+    - chúc bạn một ngày tốt lành
+    - hẹn gặp sau
+    - bye bye
+    - gặp lại sau nhé
+
+- intent: affirm
+  examples: |
+    - vâng
+    - có
+    - đúng vậy
+    - tất nhiên
+    - nghe hay đấy
+    - chính xác
+    - ok
+
+- intent: deny
+  examples: |
+    - không
+    - ko đúng
+    - không đúng
+    - không phải
+    - chưa bao giờ
+    - tôi không nghĩ vậy
+    - không thích điều đó
+    - không đời nào
+    - không hẳn
+
+- intent: mood_great
+  examples: |
+    - hoàn hảo
+    - tuyệt vời
+    - xuất sắc
+    - perfect
+    - tuyệt diệu
+    - tôi đang cảm thấy rất tốt
+    - tôi cảm thấy tuyệt vời
+    - tôi thấy mình thật tuyệt
+    - tôi sẽ cứu cả thế giới
+    - cực kỳ hào hứng
+    - cảm thấy cực kỳ tốt
+    - thật hoàn hảo
+    - rất tốt
+    - thật hoàn mỹ
+- intent: mood_unhappy
+  examples: |
+    - hôm nay của tôi thật tệ
+    - tôi buồn
+    - tôi không cảm thấy ổn
+    - tôi thất vọng
+    - cực kỳ buồn
+    - tôi buồn quá
+    - buồn
+    - rất buồn
+    - không vui
+    - không tốt
+    - không được tốt lắm
+    - vô cùng buồn
+    - buồn quá trời
+    - quá buồn
+
+- intent: bot_challenge
+  examples: |
+    - bạn có phải là bot không?
+    - bạn có phải là người không?
+    - tôi đang nói chuyện với bot à?
+    - tôi đang nói chuyện với người à?
+    - bạn có phải là người máy không?
+    - bạn là ai?

@@ -1,0 +1,50 @@
+# version: "3.1"
+
+# nlu:
+
+# - intent: ask_about_seasonal_activities #Hỏi về các hoạt động theo mùa
+#   examples: |
+#     - Khu du lịch có các hoạt động nào theo mùa không?
+#     - Có những sự kiện nào diễn ra theo mùa không?
+#     - Có các hoạt động đặc biệt nào vào mùa hè hoặc mùa đông không?
+#     - Có thể tham gia vào các lễ hội mùa nào không?
+#     - Có các tour tham quan theo mùa không?
+#     - Có các hoạt động giải trí nào phù hợp với từng mùa không?
+#     - Có thông tin gì về các hoạt động mùa lễ hội không?
+#     - Có các chương trình nào diễn ra vào mùa cao điểm không?
+#     - Có hoạt động nào đặc trưng cho mùa xuân không?
+#     - Có các món ăn mùa nào đặc biệt không?
+#     - Có các hoạt động thể thao nào theo mùa không?
+#     - Có thể tìm thấy các hoạt động ngoài trời theo mùa không?
+#     - Có lịch trình các hoạt động theo mùa không?
+#     - Có các dịch vụ nào thay đổi theo mùa không?
+#     - Có các hoạt động nào thích hợp cho gia đình theo từng mùa không?
+
+# - intent: ask_about_local_transport #Hỏi về phương tiện giao thông địa phương.
+#   examples: |
+#     - Làm thế nào để di chuyển trong khu vực này?
+#     - Có phương tiện giao thông công cộng nào không?
+#     - Tôi có thể thuê xe đạp ở đây không?
+#     - Khu du lịch có dịch vụ đưa đón không?
+#     - Xe buýt chạy đến những điểm nào?
+#     - Giá vé taxi trong khu vực là bao nhiêu?
+#     - Tôi nên đi bằng phương tiện gì khi tham quan khu vực này?
+#     - Ở đây có thể thuê xe máy không?
+#     - Có bãi đỗ xe không?
+#     - Các tuyến xe buýt hoạt động như thế nào?
+#     - Tôi có thể đi bộ đến các điểm tham quan gần đây không?
+
+# - intent: ask_about_public_transport #Hỏi về giao thông công cộng.
+#   examples: |
+#     - Giao thông công cộng ở đây như thế nào?
+#     - Tôi có thể sử dụng xe buýt hoặc tàu điện không?
+#     - Có trạm xe buýt gần khu du lịch không?
+#     - Dịch vụ giao thông công cộng hoạt động giờ nào?
+#     - Có thể đi bằng tàu điện đến khu du lịch không?
+#     - Giá vé xe buýt hoặc tàu điện như thế nào?
+#     - Giao thông công cộng có thuận tiện không?
+#     - Tôi nên sử dụng phương tiện giao thông công cộng nào?
+#     - Có lịch trình xe buýt không?
+#     - Các trạm giao thông công cộng gần đây ở đâu?
+
+

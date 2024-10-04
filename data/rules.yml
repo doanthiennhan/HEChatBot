@@ -1,0 +1,23 @@
+version: "3.1"
+
+rules:
+  - rule: Respond to goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Respond to bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Provide services information
+    steps:
+      - intent: ask_about_services
+      - action: action_list_services
+  
+  - rule: hỏi về sự kiện  # Ensure there's a space after the dash
+    steps:
+      - intent: ask_about_events
+      - action: action_event_details
+

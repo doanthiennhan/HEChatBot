@@ -1,0 +1,17 @@
+# version: "3.1"
+# nlu:
+
+# - intent: ask_about_packing_tips #Hỏi về mẹo đóng gói hành lý.
+#   examples: |
+#     - Có mẹo nào để đóng gói hành lý không?
+#     - Tôi nên mang theo những gì khi đi du lịch?
+#     - Làm thế nào để đóng gói hành lý hiệu quả?
+#     - Có cần mang theo đồ ăn không?
+#     - Tôi nên chuẩn bị gì cho chuyến đi này?
+#     - Có cách nào để tiết kiệm không gian trong vali không?
+#     - Có nên mang theo các đồ dùng cá nhân nào không?
+#     - Mẹo gì cho việc sắp xếp đồ trong vali?
+#     - Tôi cần mang theo thuốc men gì không?
+#     - Có mẹo gì để không quên đồ khi đóng gói không?
+
+

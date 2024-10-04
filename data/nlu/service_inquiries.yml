@@ -1,0 +1,234 @@
+version: "3.1"
+
+nlu:
+- intent: ask_about_services  #hỏi về loại dịch vụ
+  examples: |
+    - Khu du lịch này có những dịch vụ gì?
+    - Tôi muốn biết về các dịch vụ mà khu du lịch cung cấp.
+    - Có dịch vụ gì ở đây không?
+    - Bạn có thể cho tôi biết về các dịch vụ tại khu du lịch không?
+    - Tôi có thể sử dụng dịch vụ nào ở đây?
+    - Các dịch vụ giải trí nào có sẵn?
+    - Khu du lịch này có phục vụ ăn uống không?
+    - Có dịch vụ cho thuê xe không?
+    - Bạn có thông tin về dịch vụ spa không?
+    - Tôi muốn biết về các hoạt động và dịch vụ ở đây.
+    - Có những dịch vụ nào đang có tại khu du lịch?
+    - Dịch vụ giải trí nào có sẵn?
+    - Có dịch vụ spa hay massage không?
+    - Có các hoạt động ngoài trời nào không?
+    - Có dịch vụ đưa đón khách không?
+    - Có các tour tham quan nào có sẵn?
+    - Có dịch vụ cho thuê xe không?
+    - Có tổ chức sự kiện không?
+    - Có dịch vụ hướng dẫn viên không?
+    - Có dịch vụ chăm sóc trẻ em không?
+    - Có dịch vụ bơi lội hoặc thể thao nước không?
+    - Có các chương trình khuyến mãi cho dịch vụ không?
+    - Có dịch vụ cho thuê thiết bị thể thao không?
+    - Có cung cấp dịch vụ ăn uống không?
+    - Có các dịch vụ đặc biệt nào dành cho khách lưu trú dài ngày không?
+
+# - intent: ask_about_guide_services #hỏi về dịch vụ hướng dẫn viên
+#   examples: |
+#     - Có dịch vụ hướng dẫn viên không?
+#     - Hướng dẫn viên có nói được tiếng Anh không?
+#     - Có hướng dẫn viên địa phương không?
+#     - Giá dịch vụ hướng dẫn viên là bao nhiêu?
+#     - Có tour nào có hướng dẫn viên không?
+#     - Hướng dẫn viên sẽ đưa tôi đến những địa điểm nào?
+#     - Có thể thuê hướng dẫn viên riêng không?
+#     - Có dịch vụ hướng dẫn viên cho nhóm lớn không?
+#     - Có chương trình khuyến mãi nào cho dịch vụ hướng dẫn viên không?
+#     - Thời gian phục vụ của hướng dẫn viên là bao lâu?
+#     - Có thể đặt dịch vụ hướng dẫn viên trước không?
+#     - Hướng dẫn viên có kiến thức về lịch sử địa phương không?
+#     - Có hướng dẫn viên chuyên về các hoạt động mạo hiểm không?
+#     - Hướng dẫn viên có thể giúp tôi lập kế hoạch cho chuyến đi không?
+#     - Có dịch vụ hướng dẫn viên cho trẻ em không?
+
+# - intent: ask_about_food_services #hỏi dịch vụ ăn uống
+#   examples: |
+#     - Các loại món ăn có sẵn là gì?
+#     - Có những nhà hàng nào trong khu du lịch?
+#     - Giá cả của các món ăn như thế nào?
+#     - Có phục vụ ăn uống theo kiểu buffet không?
+#     - Giờ mở cửa của các nhà hàng là gì?
+#     - Có dịch vụ giao hàng đến phòng không?
+#     - Có món ăn đặc sản nào không?
+#     - Có lựa chọn thực đơn cho người ăn chay không?
+#     - Có dịch vụ đặt bàn trước không?
+#     - Có phục vụ đồ uống không? Nếu có, có loại nào?
+#     - Có món ăn nào dành cho trẻ em không?
+#     - Có chương trình khuyến mãi nào cho dịch vụ ăn uống không?
+#     - Có thể đặt thực phẩm theo yêu cầu riêng không?
+#     - Có thực đơn theo mùa không?
+#     - Có dịch vụ ăn uống tại bể bơi không?
+
+# - intent: ask_about_shuttle_services  #Dịch vụ xe đưa đón
+#   examples: |
+#     - Có dịch vụ xe đưa đón không?
+#     - Xe đưa đón từ sân bay đến khu du lịch có sẵn không?
+#     - Giờ hoạt động của dịch vụ xe đưa đón là gì?
+#     - Có thể đặt xe đưa đón trước không?
+#     - Giá của dịch vụ xe đưa đón là bao nhiêu?
+#     - Có xe đưa đón cho nhóm lớn không?
+#     - Dịch vụ xe đưa đón hoạt động vào những giờ nào?
+#     - Có dịch vụ xe đưa đón miễn phí không?
+#     - Có cần đặt chỗ trước cho dịch vụ xe đưa đón không?
+#     - Có dịch vụ xe đưa đón đến các điểm tham quan không?
+#     - Xe đưa đón có phục vụ khách hàng từ các khách sạn khác không?
+#     - Có bao nhiêu chuyến xe đưa đón trong ngày?
+#     - Có xe đưa đón phục vụ 24/7 không?
+#     - Có dịch vụ xe đưa đón cho các tour du lịch không?
+#     - Có bao nhiêu khách tối đa cho mỗi xe đưa đón?
+#     - Dịch vụ xe đưa đón có bao gồm bảo hiểm không?
+#     - Có dịch vụ xe đưa đón cho người khuyết tật không?
+#     - Có được đưa đón từ nhà riêng không?
+#     - Có thể chọn loại xe cho dịch vụ đưa đón không?
+#     - Có chính sách hủy bỏ cho dịch vụ xe đưa đón không?
+
+# - intent: ask_about_laundry_services #Dịch vụ giặc ủi
+#   examples: |
+#     - Có dịch vụ giặt ủi không?
+#     - Giờ hoạt động của dịch vụ giặt ủi là gì?
+#     - Giá cả của dịch vụ giặt ủi như thế nào?
+#     - Có thể đặt dịch vụ giặt ủi trước không?
+#     - Có các loại dịch vụ giặt ủi nào có sẵn?
+#     - Có thể giặt khô không?
+#     - Thời gian xử lý dịch vụ giặt ủi là bao lâu?
+#     - Có dịch vụ giặt ủi trong phòng không?
+#     - Có cần đặt chỗ trước cho dịch vụ giặt ủi không?
+#     - Có chương trình khuyến mãi nào cho dịch vụ giặt ủi không?
+#     - Có thể giặt đồ của trẻ em không?
+#     - Có dịch vụ trả đồ giặt tận phòng không?
+#     - Có giới hạn về số lượng đồ giặt không?
+#     - Có dịch vụ lành mạnh cho các loại vải nhạy cảm không?
+#     - Có thể giặt đồ theo yêu cầu riêng không?
+
+# - intent: ask_about_vip_services #hỏi về dịch vụ vip
+#   examples: |
+#     - Có dịch vụ VIP không?
+#     - Dịch vụ VIP bao gồm những gì?
+#     - Giá của dịch vụ VIP là bao nhiêu?
+#     - Có thể đặt dịch vụ VIP trước không?
+#     - Có dịch vụ VIP cho khách lưu trú không?
+#     - Có chương trình khuyến mãi nào cho dịch vụ VIP không?
+#     - Có dịch vụ ăn uống đặc biệt cho khách VIP không?
+#     - Dịch vụ VIP có gì khác biệt so với dịch vụ thường?
+#     - Có dịch vụ đón tiếp riêng cho khách VIP không?
+#     - Có dịch vụ chăm sóc khách hàng riêng cho khách VIP không?
+#     - Có giới hạn số lượng khách cho dịch vụ VIP không?
+#     - Dịch vụ VIP có bao gồm xe đưa đón không?
+#     - Có dịch vụ giải trí đặc biệt nào cho khách VIP không?
+#     - Có thể tùy chỉnh dịch vụ VIP theo yêu cầu không?
+#     - Thời gian phục vụ của dịch vụ VIP là bao lâu?
+
+# - intent: ask_about_child_friendly_services #câu hỏi dịch vụ liên quan đến trẻ em
+#   examples: |
+#     - Có dịch vụ nào dành cho trẻ em không?
+#     - Khu du lịch có các hoạt động gì cho trẻ em?
+#     - Có khu vui chơi cho trẻ em không?
+#     - Có dịch vụ trông trẻ không?
+#     - Giá cả cho các dịch vụ dành cho trẻ em là bao nhiêu?
+#     - Có thực đơn riêng cho trẻ em không?
+#     - Có các chương trình giáo dục nào cho trẻ em không?
+#     - Có thể đặt dịch vụ cho trẻ em trước không?
+#     - Có dịch vụ giải trí nào cho trẻ em không?
+#     - Có chính sách ưu đãi cho trẻ em không?
+#     - Có hướng dẫn viên chuyên về trẻ em không?
+#     - Có các hoạt động thể thao nào cho trẻ em không?
+#     - Có dịch vụ chăm sóc sức khỏe cho trẻ em không?
+#     - Có cần phải đặt chỗ trước cho dịch vụ trẻ em không?
+#     - Có lớp học nào cho trẻ em trong khu du lịch không?
+
+# - intent: ask_about_wifi # hỏi về dịch vụ
+#   examples: |
+#     - Khu du lịch có Wi-Fi không?
+#     - Tốc độ kết nối Wi-Fi như thế nào?
+#     - Có cần mật khẩu để kết nối Wi-Fi không?
+#     - Wi-Fi có miễn phí không?
+#     - Có điểm truy cập Wi-Fi ở đâu trong khu du lịch?
+#     - Có thể sử dụng Wi-Fi trong phòng không?
+#     - Có giới hạn thời gian sử dụng Wi-Fi không?
+#     - Có dịch vụ hỗ trợ kết nối Wi-Fi không?
+#     - Có thể kết nối nhiều thiết bị cùng một lúc không?
+#     - Có dịch vụ Wi-Fi cho sự kiện lớn không?
+#     - Có Wi-Fi ở khu vực ngoài trời không?
+#     - Có hỗ trợ cho việc khắc phục sự cố kết nối Wi-Fi không?
+#     - Wi-Fi có sẵn tại các nhà hàng không?
+#     - Có dịch vụ Wi-Fi nâng cao không?
+#     - Có thể đặt chỗ cho Wi-Fi tốc độ cao không?
+
+# - intent: ask_about_pet_policy #hỏi về chính sách mang thú cưng vào
+#   examples: |
+#     - Khu du lịch có cho phép mang thú cưng không?
+#     - Chính sách về thú cưng như thế nào?
+#     - Có phí nào cho việc mang thú cưng vào khu du lịch không?
+#     - Có cần đăng ký trước khi mang thú cưng không?
+#     - Có khu vực nào dành riêng cho thú cưng không?
+#     - Có dịch vụ chăm sóc thú cưng không?
+#     - Có giới hạn về kích thước thú cưng không?
+#     - Có dịch vụ trông thú cưng không?
+#     - Có thể mang thú cưng vào nhà hàng không?
+#     - Có thể mang thú cưng vào hồ bơi không?
+#     - Có quy định gì về việc nuôi thú cưng tại khu du lịch không?
+#     - Có cần giấy tờ chứng nhận sức khỏe cho thú cưng không?
+#     - Có hướng dẫn viên dành cho thú cưng không?
+#     - Có các hoạt động gì cho thú cưng trong khu du lịch không?
+#     - Có chính sách đặc biệt nào cho khách mang thú cưng không?
+
+
+# - intent: ask_about_accessibility #hỏi về dịch vụ cho người khuyết tật
+#   examples: |
+#     - Khu du lịch có khả năng tiếp cận cho người khuyết tật không?
+#     - Có lối đi riêng cho người khuyết tật không?
+#     - Có dịch vụ hỗ trợ nào cho người khuyết tật không?
+#     - Có thể sử dụng xe lăn trong khu du lịch không?
+#     - Có hướng dẫn viên dành cho người khuyết tật không?
+#     - Có các tiện nghi đặc biệt nào cho người khuyết tật không?
+#     - Có thể đặt chỗ trước cho dịch vụ hỗ trợ người khuyết tật không?
+#     - Có cầu thang máy cho người khuyết tật không?
+#     - Có thể tham gia các hoạt động cho người khuyết tật không?
+#     - Có các biện pháp an toàn nào cho người khuyết tật không?
+#     - Có dịch vụ trông trẻ cho người khuyết tật không?
+#     - Có thông tin nào về chính sách hỗ trợ người khuyết tật không?
+#     - Có biển báo bằng chữ nổi cho người khiếm thị không?
+#     - Có chương trình nào hỗ trợ người khuyết tật không?
+#     - Có các phòng nghỉ dành riêng cho người khuyết tật không?
+
+# - intent: ask_about_accommodation_facilities #Hỏi về tiện nghi và dịch vụ 
+#   examples: |
+#     - Khu du lịch có những tiện nghi nào trong phòng?
+#     - Có dịch vụ dọn phòng hàng ngày không?
+#     - Có máy lạnh trong phòng không?
+#     - Có Wi-Fi miễn phí trong phòng không?
+#     - Có minibar trong phòng không?
+#     - Có dịch vụ phòng 24/7 không?
+#     - Có bồn tắm hoặc vòi sen trong phòng không?
+#     - Có dịch vụ giặt ủi trong phòng không?
+#     - Có an ninh trong khu vực phòng không?
+#     - Có các tiện nghi cho người khuyết tật trong phòng không?
+#     - Có điều hòa không khí trong phòng không?
+#     - Có TV trong phòng không?
+#     - Có thể yêu cầu thêm giường không?
+#     - Có khu vực tiếp khách trong phòng không?
+#     - Có các loại phòng nào có sẵn?
+
+# - intent: ask_about_health_services #Hỏi về dịch vụ y tế.
+#   examples: |
+#     - Khu du lịch có dịch vụ y tế không?
+#     - Có bác sĩ có mặt tại khu du lịch không?
+#     - Có phòng khám y tế trong khu du lịch không?
+#     - Có hỗ trợ khẩn cấp về y tế không?
+#     - Có thuốc cơ bản nào được cung cấp không?
+#     - Có dịch vụ cứu thương không?
+#     - Có thể liên hệ với dịch vụ y tế ở đâu?
+#     - Có tư vấn sức khỏe miễn phí không?
+#     - Có dịch vụ kiểm tra sức khỏe không?
+#     - Có bác sĩ nào chuyên về trẻ em không?
+#     - Có dịch vụ chăm sóc sức khỏe cho người già không?
+#     - Có phương tiện nào để đưa đến bệnh viện gần nhất không?
+#     - Có thể yêu cầu dịch vụ y tế riêng tư không?
+#     - Có bảo hiểm y tế cho khách không?
+#     - Có chương trình phòng ngừa dịch bệnh nào không?
