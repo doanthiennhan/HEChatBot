@@ -2,18 +2,18 @@ version: "3.1"
 
 nlu:
 
-- intent: loại phòng
+- intent: room_type
   examples: |
-    - Khách sạn có những [loại phòng](room_type) nào?
-    - Tôi muốn biết có những [loại phòng](room_type) nào?
-    - Có những [loại phòng](room_type) nào?
-    - Hãy cho tôi danh sách [loại phòng](room_type).
-    - Những [loại phòng](room_type) nào hiện có?
-    - Bạn có thể cho tôi biết về các [loại phòng](room_type) không?
+    - Khách sạn có những [room_type](room_type) nào?
+    - Tôi muốn biết có những [room_type](room_type) nào?
+    - Có những [room_type](room_type) nào?
+    - Hãy cho tôi danh sách [room_type](room_type).
+    - Những [room_type](room_type) nào hiện có?
+    - Bạn có thể cho tôi biết về các [room_type](room_type) không?
 
-- intent: giá của tất cả loại phòng
+- intent: price_of_all_room_types
   examples: |
-    - giá của tất cả loại phòng
+    - giá của tất cả room_type
     - giá của phòng [Couple](room_type)
     - giá của phòng [Normal](room_type)
     - giá của phòng [President](room_type)
@@ -24,9 +24,9 @@ nlu:
     - giá của phòng [suite](room_type)
     - giá của phòng [VIP](room_type)
 
-- intent: mô tả phòng
+- intent: describe_room
   examples: |
-    - mô tả tất cả loại phòng
+    - mô tả tất cả room_type
     - mô tả phòng [Couple](room_describe)
     - mô tả phòng [Normal](room_describe)
     - mô tả phòng [President](room_describe)
@@ -47,7 +47,7 @@ nlu:
     - hãy cho tôi biết về phòng [VIP](room_describe) có những gì
 
 
-- intent: hỏi số phòng
+- intent: ask_number_of_rooms
   examples: |
     - Khách sạn có bao nhiêu phòng?
     - Tổng số phòng trong khách sạn là bao nhiêu?
@@ -60,7 +60,7 @@ nlu:
     - Khách sạn có bao nhiêu phòng để đặt?
     - Tôi muốn biết tổng số phòng trong khách sạn
 
-- intent: hỏi phòng trống
+- intent: ask_available_rooms
   examples: |
     - Có phòng trống không?
     - Bạn có thể cho tôi biết có phòng nào trống không?

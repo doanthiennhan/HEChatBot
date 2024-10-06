@@ -91,12 +91,12 @@ intents:
 # - ask_about_safety_guidelines
 # - ask_about_environmental_policies
 # - ask_about_return_policy
-- loại phòng
-- mô tả phòng
-- giá của tất cả loại phòng
-- giá của phòng
-- hỏi số phòng
-- hỏi phòng trống
+- room_type
+- room_describe
+- price_of_all_room_types
+- price_of_room
+- ask_for_room_count
+- ask_for_empty_rooms
 
 responses:
   utter_cheer_up:
