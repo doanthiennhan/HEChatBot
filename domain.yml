@@ -3,9 +3,18 @@ actions:
 - action_list_services
 - action_event_details
 - action_print_user_question
+- action_get_room_prices
+- action_get_room_details
+- action_list_room_types
+- action_get_room_count
+- action_get_empty_rooms
+
 entities:
 - service_list
 - num_services
+- room_type
+- room_describe
+
 intents:
 - greet
 - goodbye
@@ -82,6 +91,13 @@ intents:
 # - ask_about_safety_guidelines
 # - ask_about_environmental_policies
 # - ask_about_return_policy
+- loại phòng
+- mô tả phòng
+- giá của tất cả loại phòng
+- giá của phòng
+- hỏi số phòng
+- hỏi phòng trống
+
 responses:
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg

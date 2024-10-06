@@ -1,0 +1,79 @@
+version: "3.1"
+
+nlu:
+
+- intent: loại phòng
+  examples: |
+    - Khách sạn có những [loại phòng](room_type) nào?
+    - Tôi muốn biết có những [loại phòng](room_type) nào?
+    - Có những [loại phòng](room_type) nào?
+    - Hãy cho tôi danh sách [loại phòng](room_type).
+    - Những [loại phòng](room_type) nào hiện có?
+    - Bạn có thể cho tôi biết về các [loại phòng](room_type) không?
+
+- intent: giá của tất cả loại phòng
+  examples: |
+    - giá của tất cả loại phòng
+    - giá của phòng [Couple](room_type)
+    - giá của phòng [Normal](room_type)
+    - giá của phòng [President](room_type)
+    - giá của phòng [Family](room_type)
+    - giá của phòng [Luxurious](room_type)
+    - giá của phòng [đơn](room_type)
+    - giá của phòng [đôi](room_type)
+    - giá của phòng [suite](room_type)
+    - giá của phòng [VIP](room_type)
+
+- intent: mô tả phòng
+  examples: |
+    - mô tả tất cả loại phòng
+    - mô tả phòng [Couple](room_describe)
+    - mô tả phòng [Normal](room_describe)
+    - mô tả phòng [President](room_describe)
+    - mô tả phòng [Family](room_describe)
+    - mô tả phòng [Luxurious](room_describe)
+    - mô tả phòng [đơn](room_describe)
+    - mô tả phòng [đôi](room_describe)
+    - mô tả phòng [suite](room_describe)
+    - mô tả phòng [VIP](room_describe)
+    - hãy cho tôi biết về phòng [Couple](room_describe) có những gì
+    - hãy cho tôi biết về phòng [Normal](room_describe) có những gì
+    - hãy cho tôi biết về phòng [President](room_describe) có những gì
+    - hãy cho tôi biết về phòng [Family](room_describe) có những gì
+    - hãy cho tôi biết về phòng [Luxurious](room_describe) có những gì
+    - hãy cho tôi biết về phòng [đơn](room_describe) có những gì
+    - hãy cho tôi biết về phòng [đôi](room_describe) có những gì
+    - hãy cho tôi biết về phòng [suite](room_describe) có những gì
+    - hãy cho tôi biết về phòng [VIP](room_describe) có những gì
+
+
+- intent: hỏi số phòng
+  examples: |
+    - Khách sạn có bao nhiêu phòng?
+    - Tổng số phòng trong khách sạn là bao nhiêu?
+    - Có bao nhiêu phòng trong khách sạn của bạn?
+    - Số lượng phòng của khách sạn là bao nhiêu?
+    - Khách sạn có nhiều phòng không?
+    - Cho tôi biết số lượng phòng của khách sạn
+    - Khách sạn có quy mô như thế nào?
+    - Bạn có thể cho tôi biết số phòng của khách sạn không?
+    - Khách sạn có bao nhiêu phòng để đặt?
+    - Tôi muốn biết tổng số phòng trong khách sạn
+
+- intent: hỏi phòng trống
+  examples: |
+    - Có phòng trống không?
+    - Bạn có thể cho tôi biết có phòng nào trống không?
+    - Hiện tại có phòng nào còn trống không?
+    - Tôi muốn biết tình trạng phòng trống.
+    - Có phòng nào đang có sẵn không?
+    - Xin cho biết có phòng nào trống không?
+    - Hãy cho tôi biết số lượng phòng trống.
+    - Tôi có thể đặt một phòng trống không?
+    - Có phòng đơn nào còn trống không?
+    - Tôi cần biết xem phòng VIP có trống không?
+    - Có phòng [đơn](room_type) nào trống không?
+    - Có phòng [đôi](room_type) nào trống không?
+    - Có phòng [family](room_type) nào còn trống không?
+    - Bạn có thể cho tôi biết xem có phòng [Luxurious](room_type) nào không?
+    - Có phòng [President](room_type) trống không?
