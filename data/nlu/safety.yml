@@ -1,5 +1,5 @@
-# version: "3.1"
-# nlu:
+version: "3.1"
+nlu:
 # - intent: ask_about_safety_guidelines #Hỏi về hướng dẫn an toàn.
 #   examples: |
 #     - Có hướng dẫn an toàn nào tôi cần biết không?
@@ -26,15 +26,15 @@
 #     - Khu du lịch có sử dụng các sản phẩm thân thiện với môi trường không?
 #     - Tôi có thể tham gia vào các hoạt động bảo vệ môi trường nào không?
 
-# - intent: ask_about_return_policy #Hỏi về chính sách hoàn tiền.
-#   examples: |
-#     - Khu du lịch có chính sách hoàn tiền không?
-#     - Tôi có thể hoàn tiền cho vé đã mua không?
-#     - Có điều kiện gì để được hoàn tiền không?
-#     - Tôi cần làm gì để yêu cầu hoàn tiền?
-#     - Chính sách hoàn tiền cho các dịch vụ khác nhau là gì?
-#     - Có thời hạn nào cho việc yêu cầu hoàn tiền không?
-#     - Nếu tôi không hài lòng với dịch vụ, tôi có thể yêu cầu hoàn tiền không?
-#     - Khu du lịch có chính sách hoàn tiền cho vé vào cửa không?
-#     - Tôi có thể tìm thấy thông tin về chính sách hoàn tiền ở đâu?
-#     - Có trường hợp nào không được hoàn tiền không?
+- intent: ask_about_return_policy #Hỏi về chính sách hoàn tiền.
+  examples: |
+    - Khu du lịch có chính sách hoàn tiền không?
+    - Tôi có thể hoàn tiền cho vé đã mua không?
+    - Có điều kiện gì để được hoàn tiền không?
+    - Tôi cần làm gì để yêu cầu hoàn tiền?
+    - Chính sách hoàn tiền cho các dịch vụ khác nhau là gì?
+    - Có thời hạn nào cho việc yêu cầu hoàn tiền không?
+    - Nếu tôi không hài lòng với dịch vụ, tôi có thể yêu cầu hoàn tiền không?
+    - Khu du lịch có chính sách hoàn tiền cho vé vào cửa không?
+    - Tôi có thể tìm thấy thông tin về chính sách hoàn tiền ở đâu?
+    - Có trường hợp nào không được hoàn tiền không?

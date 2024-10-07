@@ -1,58 +1,4 @@
-# This files contains your custom actions which can be used to run
-# custom Python code.
-#
-# See this guide on how to implement these action:
-# https://rasa.com/docs/rasa/custom-actions
 
-
-# This is a simple example for a custom action which utters "Hello World!"
-
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
-
-# This files contains your custom actions which can be used to run
-# custom Python code.
-#
-# See this guide on how to implement these action:
-# https://rasa.com/docs/rasa/custom-actions
-
-
-# This is a simple example for a custom action which utters "Hello World!"
-
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
 
 import random
 import requests
@@ -62,6 +8,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from dotenv import load_dotenv
 import os
 from rasa_sdk.types import DomainDict
+from rasa_sdk.events import SlotSet, ActionExecutionRejected
 from getDatabase.get_room import *
 load_dotenv()
 
@@ -77,6 +24,9 @@ room_keywords = {
     "vip": "President Room"
 }
 
+def get_current_intent(tracker):
+    # Lấy tên intent hiện tại
+    return tracker.latest_message['intent'].get('name')
 class ActionListServices(Action):
 
     def name(self) -> Text:
@@ -85,20 +35,17 @@ class ActionListServices(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        # Lấy câu hỏi người dùng từ tracker
-        user_question = tracker.latest_message.get('text')
-        
-        # In ra câu hỏi của người dùng (có thể sử dụng print hoặc logging)
-        print(f"Người dùng đã hỏi: {user_question}")
+
         # URL của API
         url = BASE_URL + "serviceTypes"
-        
+        combined_data = ""
         try:
             # Gửi yêu cầu GET đến API
             response = requests.get(url)
             response.raise_for_status()  # Kiểm tra mã trạng thái HTTP
 
             data = response.json()
+            
 
             if "result" in data and isinstance(data["result"], list):
                 services = data["result"]
@@ -108,26 +55,29 @@ class ActionListServices(Action):
                 service_list = ", ".join([service["name"] for service in services])
                 
                 # Tạo phản hồi cho người dùng
-                message = f"Hiện tại có {num_services} loại dịch vụ: {service_list}."
+                combined_data = f"Hiện tại có {num_services} loại dịch vụ: {service_list}."
             else:
-                message = "Không tìm thấy dữ liệu về dịch vụ."
+                dispatcher.utter_message(template="utter_error")
         
         except requests.exceptions.RequestException as e:
             # Bắt lỗi khi có sự cố với yêu cầu
             
-            message = f"Xin lỗi . tôi không thể trả lời câu hỏi này của bạn "
-        
-        dispatcher.utter_message(text=message)
+            dispatcher.utter_message(template="utter_error")
 
-        return []
-    
+        # Gửi phản hồi cho người dùng
+        if(combined_data == ""):
+            return [ActionExecutionRejected(self.name())]
+
+        # Cập nhật slot với thông điệp
+        return [SlotSet("combined_data", combined_data)]
+
+
 class ActionEventDetails(Action):
 
     def name(self) -> str:
         return "action_event_details"
 
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict):
-
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict) -> List[Dict[Text, Any]]:
         # Lấy câu hỏi của người dùng
         user_message = tracker.latest_message.get('text', '').lower()
 
@@ -151,8 +101,45 @@ class ActionEventDetails(Action):
         # In ra các loại sự kiện đã xác định
         print("Các loại sự kiện xác định:", list(event_types))
 
-        return []
-    
+        all_events = []  # Danh sách để lưu trữ tất cả các sự kiện
+        combined_data = ""
+        # Gọi API cho từng loại sự kiện
+        for event_type in event_types:
+            search_query = event_type  # Chỉ tìm kiếm theo loại sự kiện
+            page = 1  # Bắt đầu từ trang 1
+
+            while True:
+                url = f"http://localhost:8080/blogs?page={page}&size=20&search={search_query}"
+                try:
+                    response = requests.get(url)
+                    response.raise_for_status()  # Kiểm tra mã trạng thái HTTP
+
+                    # Xử lý dữ liệu trả về
+                    result = response.json().get("result", {})
+                    events = result.get("data", [])
+                    all_events.extend(events)  # Thêm sự kiện vào danh sách
+
+                    # Kiểm tra xem còn trang nào không
+                    if result.get("currentPage") >= result.get("totalPages"):
+                        break  # Nếu đã đến trang cuối, thoát khỏi vòng lặp
+
+                    page += 1  # Tăng số trang lên 1 để lấy trang tiếp theo
+                except requests.exceptions.RequestException as e:
+                    dispatcher.utter_message(template="utter_error")
+                    return [ActionExecutionRejected(self.name())]
+
+        # Loại bỏ sự kiện trùng lặp dựa trên ID
+        unique_events = {event['id']: event for event in all_events}.values()
+
+        # Gửi danh sách sự kiện cho người dùng
+        if unique_events:
+            event_list = "\n".join([f"- {event['title']}" for event in unique_events])  # Giả sử mỗi sự kiện có trường 'title'
+            combined_data = f"Các sự kiện của chúng tôi:\n{event_list}"
+            return [SlotSet("combined_data", combined_data)]
+        else:
+            dispatcher.utter_message(text="Không tìm thấy sự kiện nào phù hợp.")
+            return [ActionExecutionRejected(self.name())]
+            
 
 class ActionPrintUserQuestion(Action):
     def name(self) -> Text:
@@ -172,7 +159,6 @@ class ActionPrintUserQuestion(Action):
         dispatcher.utter_message(text=f"Bạn đã hỏi: {user_question}")
         
         return []
-
 
 
 class ActionListRoomTypes(Action):
@@ -311,3 +297,28 @@ class ActionGetEmptyRooms(Action):
         dispatcher.utter_message(text=response)
         
         return []
+    
+class ActionGetReturnPolicy(Action):
+    def name(self) -> Text:
+        return "action_get_return_policy"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        combined_data = ""
+        intent = get_current_intent(tracker)
+        print("intent: ", intent)
+        try:
+            # Gửi yêu cầu GET đến API
+            response = requests.get(BASE_URL + "faq/"+intent)
+            response.raise_for_status()  # Kiểm tra mã trạng thái HTTP
+            data = response.json()
+            description = data['result']['description']
+            combined_data = f"{description}"
+            print(combined_data)
+            
+        except requests.exceptions.RequestException as e:
+            dispatcher.utter_message(template="utter_error")
+            return [ActionExecutionRejected(self.name())]
+    
+        return [SlotSet("combined_data", combined_data)]

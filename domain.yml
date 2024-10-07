@@ -1,20 +1,19 @@
 version: '3.1'
 actions:
 - action_list_services
+- action_list_service_error
 - action_event_details
 - action_print_user_question
+- ask_about_activities
 - action_get_room_prices
 - action_get_room_details
-- action_list_room_types
 - action_get_room_count
 - action_get_empty_rooms
+- action_get_return_policy
 
 entities:
 - service_list
 - num_services
-- room_type
-- room_describe
-
 intents:
 - greet
 - goodbye
@@ -90,13 +89,12 @@ intents:
 # - ask_about_frequent_questions
 # - ask_about_safety_guidelines
 # - ask_about_environmental_policies
-# - ask_about_return_policy
+- ask_about_return_policy
 - room_type
-- room_describe
+- describe_room
 - price_of_all_room_types
-- price_of_room
-- ask_for_room_count
-- ask_for_empty_rooms
+- ask_number_of_rooms
+- ask_available_rooms
 
 responses:
   utter_cheer_up:
@@ -106,6 +104,8 @@ responses:
   - text: Điều đó có giúp ích được cho bạn không?
   utter_error:
   - text: Xin lỗi, tôi không thể trả lời câu hỏi này .
+  - text: Xin lỗi, hiện giờ tôi chưa thể trả lời được câu hỏi này . .
+  - text: Tôi không thể trả lời được câu hỏi này. Xin lỗi vì sự bất tiện này .
   utter_goodbye:
   - text: Tạm biệt, hẹn gặp lại bạn!
   utter_greet:
@@ -118,7 +118,25 @@ responses:
   - text: Tôi là Chatbot, tôi có thể giúp gì được cho bạn?
   utter_response:
   - text: Bạn cần biết thêm thông tin gì không .
+  utter_ask_about_services:
+  - text: Khu du lịch của chúng tôi {combined_data} Bạn muốn biết thông tin về dịch vụ nào?
+  - text: Khu du lịch chúng tôi {combined_data} Bạn muốn biết thêm thông tin về dịch vụ nào không?
+  - text: Chào mừng bạn đến với khu du lịch {combined_data} Có dịch vụ nào bạn muốn biết thêm không?
+  utter_ask_about_return_policy:
+  - text: Chính sách hoàn tiền của khu du lịch là {combined_data}
 session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 60
-slots: {}
+
+
+slots: 
+  combined_data:
+    type: any 
+    influence_conversation: false
+    initial_value: 
+      text: "the first time"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+      video: "https://www.example.com/video.mp4"
+    mappings:
+      - type: from_text
+

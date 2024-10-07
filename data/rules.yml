@@ -15,7 +15,16 @@ rules:
     steps:
       - intent: ask_about_services
       - action: action_list_services
-  
+      - slot_was_set:
+        - combined_data 
+      - action: utter_ask_about_services
+
+  - rule: hỏi về chính sách hoàn tiền
+    steps:
+      - intent: ask_about_return_policy
+      - action: action_get_return_policy
+      - action: utter_ask_about_return_policy
+
   - rule: hỏi về sự kiện  # Ensure there's a space after the dash
     steps:
       - intent: ask_about_events

@@ -29,15 +29,22 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: User asks about services
+- story: Người dùng hỏi về dịch vụ
   steps:
   - intent: ask_about_services
   - action: action_list_services
+  - slot_was_set:
+    - combined_data 
+  - action: utter_ask_about_services
 
-- story: User asks about events in the tourist area
+
+
+- story: hỏi về các sự kiện trong khu du lịch
   steps:
   - intent: ask_about_events
   - action: action_event_details
+
+
 
 - story: Room prices
   steps:
@@ -51,15 +58,25 @@ stories:
 
 - story: Ask for room count
   steps:
-    - intent: ask_for_room_count
+    - intent: ask_number_of_rooms
     - action: action_get_room_count
 
 - story: Ask for empty rooms
   steps:
-    - intent: ask_for_empty_rooms
+    - intent: ask_available_rooms
     - action: action_get_empty_rooms
 
-- story: Ask for empty rooms with check-in date
+- story: Ask for return policy
   steps:
-    - intent: ask_for_empty_rooms_with_checkin
-    - action: action_get_rooms_by_checkin_and_roomtype
+    - intent: ask_about_return_policy
+    - action: action_get_return_policy
+    - action: utter_ask_about_return_policy
+
+# - story: Ask for empty rooms with check-in date
+#   steps:
+#     - intent: ask_for_empty_rooms_with_checkin
+#     - action: action_get_rooms_by_checkin_and_roomtype
+
+
+
+  
