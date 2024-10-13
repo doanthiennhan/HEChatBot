@@ -80,3 +80,116 @@ stories:
 
 
 # tao text commit
+  - story: ask_discount_for_early_booking
+    steps:
+      - intent: ask_discount_for_early_booking
+      - action: action_get_return_policy
+      - action: utter_ask_discount_for_early_booking
+
+  - story: ask_check_in_time
+    steps:
+      - intent: ask_check_in_time
+      - action: action_get_return_policy
+      - action: utter_ask_check_in_time
+
+  - story: ask_check_out_time
+    steps:
+      - intent: ask_check_out_time
+      - action: action_get_return_policy
+      - action: utter_ask_check_out_time
+
+  - story: ask_services_hotel_offered
+    steps:
+      - intent: ask_services_hotel_offered
+      - action: action_get_return_policy
+      - action: utter_ask_services_hotel_offered
+    
+  - story: ask_amenities_inquiry
+    steps:
+      - intent: ask_amenities_inquiry
+      - action: action_get_return_policy
+      - action: utter_ask_amenities_inquiry
+
+  - story: ask_location_information
+    steps:
+      - intent: ask_location_information
+      - action: action_get_return_policy
+      - action: utter_ask_location_information
+
+  - story: ask_special_offers
+    steps:
+      - intent: ask_special_offers
+      - action: action_get_return_policy
+      - action: utter_ask_special_offers
+
+  - story: ask_discount_now
+    steps:
+      - intent: ask_discount_now
+      - action: action_get_return_policy
+      - action: utter_ask_discount_now
+
+  - story: ask_payment_methods
+    steps:
+      - intent: ask_payment_methods
+      - action: action_get_return_policy
+      - action: utter_ask_payment_methods
+
+  - story: ask_late_check_in
+    steps:
+      - intent: ask_late_check_in
+      - action: action_get_return_policy
+      - action: utter_ask_late_check_in
+
+  - story: ask_early_check_out
+    steps:
+      - intent: ask_early_check_out
+      - action: action_get_return_policy
+      - action: utter_ask_early_check_out
+        
+  - story: ask_extend_stay
+    steps:
+      - intent: ask_extend_stay
+      - action: action_get_return_policy
+      - action: utter_ask_extend_stay
+        
+  - story: ask_transportation_service
+    steps:
+      - intent: ask_transportation_service
+      - action: action_get_return_policy
+      - action: utter_ask_transportation_service
+        
+  - story: ask_loyalty_program
+    steps:
+      - intent: ask_loyalty_program
+      - action: action_get_return_policy
+      - action: utter_ask_loyalty_program
+
+  - story: ask_cancellation_policy
+    steps:
+      - intent: ask_cancellation_policy
+      - action: action_get_return_policy
+      - action: utter_ask_cancellation_policy      
+
+  - story: ask_contact_reception
+    steps:
+      - intent: ask_contact_reception
+      - action: action_get_return_policy
+      - action: utter_ask_contact_reception        
+
+  - story: ask_local_activities
+    steps:
+      - intent: ask_local_activities
+      - action: action_get_return_policy
+      - action: utter_ask_local_activities   
+
+  - story: ask_parking
+    steps:
+      - intent: ask_parking
+      - action: action_get_return_policy
+      - action: utter_ask_parking   
+
+  - story: ask_dining_options
+    steps:
+      - intent: ask_dining_options
+      - action: action_get_return_policy
+      - action: utter_ask_dining_options   

@@ -95,6 +95,26 @@ intents:
 - price_of_all_room_types
 - ask_number_of_rooms
 - ask_available_rooms
+- ask_discount_for_early_booking
+- ask_check_in_time
+- ask_check_out_time
+- ask_services_hotel_offered
+- ask_request_room_service
+- ask_amenities_inquiry
+- ask_location_information
+- ask_special_offers
+- ask_discount_now
+- ask_payment_methods
+- ask_late_check_in
+- ask_early_check_out
+- ask_extend_stay
+- ask_transportation_service
+- ask_loyalty_program
+- ask_cancellation_policy
+- ask_contact_reception
+- ask_local_activities
+- ask_parking
+- ask_dining_options
 
 responses:
   utter_cheer_up:
@@ -124,6 +144,171 @@ responses:
   - text: Chào mừng bạn đến với khu du lịch {combined_data} Có dịch vụ nào bạn muốn biết thêm không?
   utter_ask_about_return_policy:
   - text: Chính sách hoàn tiền của khu du lịch là {combined_data}
+
+  utter_ask_discount_for_early_booking:
+  - text: "Hiện tại khách sạn của chúng tôi {combined_data}. Bạn có muốn biết thêm thông tin về chương trình giảm giá khi đặt trước không?"
+  - text: "Chào mừng bạn đến với khách sạn của chúng tôi! Hiện tại {combined_data}. Bạn muốn tìm hiểu thêm về chương trình này chứ?"
+  - text: "Chúng tôi hiện có các ưu đãi đặc biệt, {combined_data}. Bạn có quan tâm đến việc đặt phòng sớm không?"
+
+  utter_ask_check_in_time:
+  - text: "Hiện tại khách sạn chúng tôi {combined_data}, bạn có thể check-in vào bất kỳ lúc nào cũng được ạ!"
+  - text: "Khách sạn của chúng tôi {combined_data}, vì vậy bạn có thể nhận phòng vào thời gian thuận tiện cho mình!"
+  - text: "Chúng tôi luôn sẵn sàng chào đón bạn! Bạn có thể check-in {combined_data} tại khách sạn."
+  - text: "Khách sạn {combined_data}, bạn có thể nhận phòng vào thời gian phù hợp nhất với mình!"
+  - text: "Bạn có thể đến check-in bất cứ lúc nào trong thời gian {combined_data} tại khách sạn của chúng tôi!"
+
+  utter_ask_check_out_time:
+  - text: "Thời gian trả phòng của khách sạn là {combined_data}. Bạn có muốn biết thêm thông tin gì khác không?"
+  - text: "Giờ trả phòng tại khách sạn là {combined_data}. Nếu bạn cần hỗ trợ thêm, đừng ngần ngại hỏi nhé!"
+  - text: "Khách sạn của chúng tôi yêu cầu bạn trả phòng trước {combined_data}. Bạn có cần thêm chi tiết về quy trình không?"
+  - text: "Bạn cần phải trả phòng trước {combined_data}. Nếu bạn có thắc mắc nào khác, tôi sẵn lòng hỗ trợ!"
+  - text: "Thời gian trả phòng là {combined_data}. Bạn có muốn tìm hiểu thêm về dịch vụ giữ hành lý không?"
+  - text: "Giờ trả phòng là {combined_data}. Nếu bạn muốn biết về các tùy chọn trả phòng muộn, hãy cho tôi biết!"
+  - text: "Bạn cần trả phòng trước {combined_data}. Chúng tôi có dịch vụ giúp bạn làm thủ tục trả phòng nhanh chóng!"
+  - text: "Khách sạn yêu cầu trả phòng vào lúc {combined_data}. Bạn có muốn biết thêm về các dịch vụ khác của chúng tôi không?"
+  - text: "Thời gian trả phòng là {combined_data}. Nếu bạn cần đặt dịch vụ taxi hoặc phương tiện di chuyển khác, tôi có thể giúp!"
+  - text: "Bạn cần trả phòng trước {combined_data}. Nếu bạn có kế hoạch ở lại lâu hơn, chúng tôi có thể thảo luận về việc gia hạn!"
+
+  utter_ask_services_hotel_offered:
+  - text: "Khách sạn chúng tôi cung cấp các dịch vụ như {combined_data}. Bạn có muốn biết thêm chi tiết về dịch vụ nào không?"
+  - text: "Chúng tôi cung cấp {combined_data}. Bạn có quan tâm đến dịch vụ nào không?"
+  - text: "Các dịch vụ tại khách sạn bao gồm {combined_data}. Nếu bạn cần thêm thông tin, hãy cho tôi biết nhé!"
+  - text: "Khách sạn của chúng tôi có {combined_data}. Bạn có muốn tìm hiểu chi tiết về bất kỳ dịch vụ nào không?"
+  - text: "Khách sạn hiện cung cấp {combined_data}. Nếu bạn có câu hỏi cụ thể về dịch vụ nào, hãy cho tôi biết nhé!"
+  - text: "Dịch vụ khách sạn bao gồm {combined_data}. Bạn có muốn tìm hiểu thêm về chi tiết từng dịch vụ không?"
+
+  utter_ask_request_room_service:
+  - text: "Bạn có thể yêu cầu dịch vụ phòng bất cứ lúc nào qua số điện thoại {combined_data} hoặc đặt qua ứng dụng của khách sạn."
+  - text: "Để đặt dịch vụ phòng, bạn chỉ cần liên hệ số {combined_data}. Chúng tôi luôn sẵn sàng phục vụ!"
+  - text: "Bạn có thể yêu cầu dịch vụ phòng qua số {combined_data} hoặc ứng dụng khách sạn. Vui lòng cho tôi biết nếu bạn cần thêm thông tin!"
+  - text: "Dịch vụ phòng của chúng tôi hoạt động {combined_data}. Bạn có thể yêu cầu bất cứ lúc nào!"
+  - text: "Bạn có thể gọi số {combined_data} để yêu cầu dịch vụ phòng hoặc sử dụng ứng dụng khách sạn."
+  - text: "Dịch vụ phòng luôn sẵn sàng. Hãy gọi {combined_data} hoặc đặt trực tuyến nếu bạn muốn sử dụng!"
+  - text: "Chúng tôi cung cấp dịch vụ phòng từ {combined_data}. Bạn muốn yêu cầu dịch vụ phòng ngay bây giờ không?"
+  - text: "Bạn có thể liên hệ với dịch vụ phòng qua số {combined_data} hoặc đặt qua ứng dụng của khách sạn."
+
+  utter_ask_amenities_inquiry:
+  - text: "Khách sạn chúng tôi có nhiều tiện nghi như {combined_data}. Bạn có muốn biết thêm về tiện nghi nào không?"
+  - text: "Chúng tôi cung cấp các tiện nghi như {combined_data}. Bạn có cần thêm thông tin về bất kỳ tiện nghi nào không?"
+  - text: "Các tiện nghi của khách sạn bao gồm {combined_data}. Bạn có muốn tìm hiểu chi tiết hơn về chúng không?"
+  - text: "Khách sạn của chúng tôi có các tiện nghi như {combined_data}. Nếu bạn muốn biết thêm, tôi sẵn sàng hỗ trợ!"
+  - text: "Chúng tôi cung cấp {combined_data}. Bạn có cần thêm thông tin gì về tiện nghi không?"
+  - text: "Các tiện nghi bao gồm {combined_data}. Nếu bạn cần chi tiết hơn về tiện nghi nào, hãy cho tôi biết nhé!"
+  - text: "Khách sạn có các tiện nghi như {combined_data}. Bạn có cần biết thêm về tiện nghi nào không?"
+  
+  utter_ask_location_information:
+  - text: "Khách sạn của chúng tôi tọa lạc tại {combined_data}. Bạn có muốn biết thêm về các địa điểm xung quanh không?"
+  - text: "Chúng tôi nằm ở {combined_data}, rất thuận tiện cho việc di chuyển. Bạn cần thêm thông tin về cách đến đây không?"
+  - text: "Khách sạn nằm tại {combined_data}. Nếu bạn cần hỗ trợ chỉ đường, tôi sẵn lòng giúp đỡ!"
+  - text: "Bạn có thể tìm thấy khách sạn tại {combined_data}. Nếu có thắc mắc về vị trí hoặc di chuyển, tôi sẽ hỗ trợ bạn."
+  - text: "Địa chỉ khách sạn là {combined_data}. Nếu cần biết thêm về khu vực xung quanh, hãy cho tôi biết nhé!"
+  - text: "Khách sạn tọa lạc ở {combined_data}, rất gần các địa điểm nổi tiếng. Bạn muốn biết thêm về vị trí không?"
+  - text: "Chúng tôi nằm tại {combined_data}. Bạn có muốn biết thêm thông tin về các dịch vụ hoặc địa điểm gần khách sạn không?"
+  - text: "Khách sạn tọa lạc tại {combined_data}. Nếu bạn cần chỉ đường hoặc thông tin thêm, tôi có thể giúp bạn."
+
+  utter_ask_special_offers:
+  - text: "Hiện tại khách sạn của chúng tôi đang có chương trình khuyến mãi {combined_data}. Bạn có muốn biết thêm chi tiết không?"
+  - text: "Chúng tôi có nhiều ưu đãi đặc biệt như {combined_data}. Bạn có muốn tìm hiểu thêm không?"
+  - text: "Chương trình khuyến mãi hiện tại bao gồm {combined_data}. Nếu bạn cần thêm thông tin, hãy cho tôi biết nhé!"
+  - text: "Khách sạn đang áp dụng các ưu đãi như {combined_data}. Bạn có quan tâm đến việc đặt phòng không?"
+  - text: "Chúng tôi có một số chương trình khuyến mãi hấp dẫn, như {combined_data}. Bạn có muốn tìm hiểu thêm không?"
+  - text: "Hiện tại, khách sạn có các ưu đãi đặc biệt, {combined_data}. Bạn có cần hỗ trợ gì thêm không?"
+  - text: "Chương trình khuyến mãi của chúng tôi bao gồm {combined_data}. Nếu bạn muốn biết thêm thông tin, tôi sẵn sàng giúp đỡ!"
+
+  utter_ask_discount_now:
+  - text: "Nếu bạn đặt phòng ngay bây giờ, chúng tôi đang có chương trình {combined_data}. Bạn có muốn tìm hiểu thêm không?"
+  - text: "Hiện tại, khách sạn đang áp dụng khuyến mãi {combined_data} cho những ai đặt phòng ngay. Bạn có muốn biết thêm chi tiết không?"
+  - text: "Chúng tôi có ưu đãi đặc biệt cho khách đặt phòng ngay, với {combined_data}. Bạn có cần thêm thông tin không?"
+  - text: "Nếu bạn đặt phòng ngay bây giờ, bạn có thể nhận được ưu đãi {combined_data}. Bạn có muốn đặt ngay không?"
+  - text: "Khách sạn hiện đang có chương trình {combined_data} cho những khách đặt phòng ngay. Bạn có muốn biết thêm về các loại phòng không?"
+  - text: "Đặt phòng ngay hôm nay sẽ mang lại cho bạn {combined_data}. Bạn có muốn đặt phòng không?"
+  - text: "Chúng tôi đang có một chương trình khuyến mãi hấp dẫn cho khách hàng đặt phòng ngay, với {combined_data}. Nếu bạn cần thêm thông tin, tôi sẵn sàng hỗ trợ!"
+  - text: "Hiện tại, khách sạn đang có nhiều ưu đãi cho khách đặt phòng ngay, bao gồm {combined_data}. Bạn có muốn tìm hiểu thêm không?"
+  - text: "Nếu bạn đặt phòng ngay bây giờ, bạn sẽ nhận được {combined_data}. Bạn có muốn đặt ngay không?"
+  - text: "Chúng tôi có nhiều ưu đãi hấp dẫn cho khách hàng đặt phòng ngay, bao gồm {combined_data}. Bạn có muốn biết thêm chi tiết không?"
+
+  utter_ask_payment_methods:
+  - text: "Khách sạn của chúng tôi chấp nhận nhiều phương thức thanh toán, bao gồm {combined_data}. Bạn cần thêm thông tin nào khác không?"
+  - text: "Bạn có thể thanh toán bằng {combined_data} tại khách sạn. Nếu bạn cần hỗ trợ thêm, hãy cho tôi biết!"
+  - text: "Chúng tôi chấp nhận các phương thức thanh toán như {combined_data}. Bạn có muốn biết thêm chi tiết không?"
+  - text: "Khách sạn hiện đang hỗ trợ thanh toán qua {combined_data}. Bạn có muốn biết thêm về quy trình thanh toán không?"
+  - text: "Bạn có thể thanh toán bằng {combined_data}. Nếu bạn có câu hỏi gì, tôi sẵn lòng hỗ trợ!"
+
+  utter_ask_late_check_in:
+  - text: "Khách sạn của chúng tôi cho phép nhận phòng trễ đến {combined_data}. Bạn có cần thêm thông tin nào khác không?"
+  - text: "Nếu bạn đến muộn, bạn vẫn có thể nhận phòng. Chúng tôi cho phép nhận phòng trễ đến {combined_data}. Bạn có muốn tìm hiểu thêm không?"
+  - text: "Chúng tôi có chính sách nhận phòng trễ đến {combined_data}. Nếu bạn cần hỗ trợ thêm, hãy cho tôi biết!"
+  - text: "Bạn có thể nhận phòng trễ đến {combined_data}. Hãy cho tôi biết nếu bạn có câu hỏi nào khác!"
+  - text: "Khách sạn hỗ trợ nhận phòng trễ cho khách hàng. Bạn có thể đến trước {combined_data}. Cần tôi giúp gì không?"
+
+  utter_ask_early_check_out:
+  - text: "Khách sạn của chúng tôi cho phép trả phòng sớm trước {combined_data}. Bạn có cần thêm thông tin nào không?"
+  - text: "Nếu bạn muốn trả phòng sớm, bạn có thể làm điều đó trước {combined_data}. Hãy cho tôi biết nếu bạn cần hỗ trợ!"
+  - text: "Chúng tôi hỗ trợ trả phòng sớm cho khách hàng. Bạn có thể trả phòng trước {combined_data}. Bạn có câu hỏi nào không?"
+  - text: "Bạn có thể trả phòng sớm trước {combined_data}. Nếu bạn cần giúp gì, hãy cho tôi biết!"
+  - text: "Khách sạn cho phép trả phòng sớm trước {combined_data}. Bạn có muốn biết thêm chi tiết không?"
+
+  utter_ask_extend_stay:
+  - text: "Bạn có thể gia hạn thời gian lưu trú đến {combined_data}. Bạn có muốn thực hiện điều này không?"
+  - text: "Chúng tôi có thể hỗ trợ bạn gia hạn lưu trú. Bạn có thể ở thêm {combined_data}. Cần tôi giúp gì thêm không?"
+  - text: "Khách sạn cho phép bạn gia hạn thêm thời gian lưu trú đến {combined_data}. Bạn có muốn biết thêm chi tiết không?"
+  - text: "Nếu bạn muốn ở lại lâu hơn, chúng tôi có thể gia hạn cho bạn đến {combined_data}. Bạn có cần hỗ trợ gì không?"
+  - text: "Bạn có thể yêu cầu gia hạn lưu trú và ở lại thêm {combined_data}. Hãy cho tôi biết nếu bạn cần giúp đỡ!"
+
+  utter_ask_transportation_service:
+  - text: "Khách sạn chúng tôi cung cấp dịch vụ đưa đón đến {combined_data}. Bạn có muốn đặt dịch vụ này không?"
+  - text: "Chúng tôi có dịch vụ đưa đón đến các điểm tham quan và sân bay. Bạn muốn biết thêm thông tin về {combined_data} không?"
+  - text: "Bạn có thể yêu cầu dịch vụ đưa đón của khách sạn đến {combined_data}. Cần tôi giúp gì thêm không?"
+  - text: "Chúng tôi cung cấp dịch vụ đưa đón đến {combined_data}. Hãy cho tôi biết nếu bạn cần đặt lịch nhé!"
+  - text: "Dịch vụ đưa đón của khách sạn bao gồm {combined_data}. Bạn có muốn đặt ngay không?"
+
+  utter_ask_loyalty_program:
+  - text: "Khách sạn của chúng tôi có chương trình khách hàng thân thiết với nhiều ưu đãi hấp dẫn như {combined_data}. Bạn có muốn tìm hiểu thêm không?"
+  - text: "Chúng tôi có chương trình khách hàng thân thiết, giúp bạn nhận được {combined_data}. Bạn có muốn tham gia không?"
+  - text: "Bạn có thể tham gia chương trình khách hàng thân thiết của chúng tôi và nhận được {combined_data}. Hãy cho tôi biết nếu bạn quan tâm!"
+  - text: "Chương trình khách hàng thân thiết mang lại nhiều lợi ích, bao gồm {combined_data}. Bạn có cần thông tin chi tiết không?"
+  - text: "Khách sạn cung cấp nhiều ưu đãi cho khách hàng thân thiết, chẳng hạn như {combined_data}. Bạn có muốn biết thêm không?"
+
+  utter_ask_cancellation_policy:
+  - text: "Chính sách hủy phòng của khách sạn chúng tôi là {combined_data}. Bạn có cần thêm thông tin chi tiết không?"
+  - text: "Nếu bạn muốn hủy phòng, bạn cần lưu ý rằng {combined_data}. Có điều gì khác tôi có thể giúp bạn không?"
+  - text: "Khách sạn áp dụng chính sách hủy phòng như sau: {combined_data}. Nếu bạn có thắc mắc nào, hãy cho tôi biết!"
+  - text: "Theo chính sách của chúng tôi, {combined_data}. Bạn có cần hỗ trợ gì thêm không?"
+  - text: "Chính sách hủy phòng hiện tại là {combined_data}. Nếu bạn cần thêm thông tin, tôi rất sẵn lòng giúp đỡ!"
+
+  utter_ask_contact_reception:
+  - text: "Bạn có thể liên hệ với lễ tân qua số điện thoại {combined_data}. Nếu cần trợ giúp, tôi sẵn lòng hỗ trợ!"
+  - text: "Lễ tân có thể được liên hệ qua số  {combined_data}. Bạn có cần thêm thông tin gì khác không?"
+  - text: "Bạn có thể gọi lễ tân theo số {combined_data} hoặc đến trực tiếp quầy lễ tân. Có điều gì khác tôi có thể giúp bạn không?"
+  - text: "Số điện thoại liên hệ với lễ tân là {combined_data}. Nếu bạn cần hỏi gì thêm, hãy cho tôi biết!"
+  - text: "Để liên hệ với lễ tân, bạn có thể sử dụng số {combined_data}. Tôi có thể giúp gì thêm cho bạn không?"
+
+  utter_ask_local_activities:
+  - text: "Gần đây có nhiều hoạt động thú vị như {combined_data}. Bạn muốn tham gia hoạt động nào không?"
+  - text: "Tại khu vực này, bạn có thể tham gia các hoạt động như {combined_data}. Nếu cần thêm thông tin, hãy cho tôi biết!"
+  - text: "Có nhiều lựa chọn giải trí gần đây như {combined_data}. Bạn có muốn biết thêm chi tiết không?"
+  - text: "Các hoạt động giải trí gần đây bao gồm {combined_data}. Nếu bạn cần hướng dẫn hoặc chỉ dẫn, tôi sẵn sàng hỗ trợ!"
+  - text: "Bạn có thể tham gia những hoạt động như {combined_data} gần khách sạn. Nếu bạn muốn, tôi có thể giúp bạn đặt chỗ!"
+  - text: "Khu vực xung quanh khách sạn có rất nhiều hoạt động thú vị, bao gồm {combined_data}. Bạn có muốn tìm hiểu thêm không?"
+  - text: "Tại đây có nhiều hoạt động giải trí mà bạn có thể tham gia, ví dụ như {combined_data}. Nếu cần, tôi có thể hỗ trợ bạn sắp xếp!"
+
+  utter_ask_parking:
+  - text: "Khách sạn của chúng tôi có bãi đỗ xe {combined_data}. Bạn có cần thêm thông tin không?"
+  - text: "Bạn có thể sử dụng bãi đỗ xe {combined_data}. Nếu bạn có thắc mắc nào khác, hãy cho tôi biết!"
+  - text: "Bãi đỗ xe tại khách sạn {combined_data}. Nếu bạn cần hỗ trợ, tôi sẵn sàng giúp đỡ!"
+  - text: "Chúng tôi có bãi đỗ xe {combined_data}. Nếu bạn muốn tìm hiểu thêm, hãy cho tôi biết!"
+  - text: "Bãi đỗ xe của khách sạn được cung cấp {combined_data}. Bạn có muốn biết thêm chi tiết không?"
+  - text: "Có bãi đỗ xe {combined_data} cho khách lưu trú tại đây. Nếu bạn cần hỗ trợ, tôi rất vui lòng giúp đỡ!"
+  - text: "Chúng tôi có bãi đỗ xe {combined_data}. Bạn có muốn hỏi gì thêm không?"
+
+  utter_ask_dining_options:
+  - text: "Khách sạn của chúng tôi cung cấp các lựa chọn ăn uống {combined_data}. Bạn có muốn biết thêm chi tiết không?"
+  - text: "Bạn có thể thưởng thức ẩm thực tại {combined_data}. Nếu bạn cần thêm thông tin, hãy cho tôi biết!"
+  - text: "Chúng tôi có nhiều lựa chọn ăn uống, bao gồm {combined_data}. Bạn có cần hỗ trợ gì không?"
+  - text: "Tại khách sạn, bạn có thể tìm thấy {combined_data}. Nếu bạn muốn đặt chỗ hoặc biết thêm, tôi rất vui lòng giúp đỡ!"
+  - text: "Chúng tôi có dịch vụ ăn uống {combined_data}. Nếu bạn có câu hỏi nào khác, hãy chia sẻ với tôi nhé!"
+  - text: "Bạn có thể trải nghiệm {combined_data} trong thời gian lưu trú tại đây. Bạn có muốn tìm hiểu thêm không?"
+
 session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 60
