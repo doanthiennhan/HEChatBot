@@ -1,0 +1,95 @@
+# version: "3.1"
+
+# nlu:
+# - intent: ask_about_best_travel_time #Hỏi về thời gian du lịch tốt nhất.
+#   examples: |
+#     - Thời gian nào là tốt nhất để đến khu du lịch này?
+#     - Khi nào là mùa cao điểm du lịch?
+#     - Có tháng nào nên tránh khi đến đây không?
+#     - Thời tiết vào mùa nào là đẹp nhất để du lịch?
+#     - Có sự kiện nào đặc biệt diễn ra vào thời gian nào không?
+#     - Khi nào thì khu du lịch ít đông khách?
+#     - Có thời gian nào phù hợp cho gia đình không?
+#     - Tôi nên lên kế hoạch cho chuyến đi này vào lúc nào?
+#     - Thời gian nào có nhiều hoạt động thú vị diễn ra?
+#     - Có thông tin gì về mùa du lịch tốt nhất không?
+
+# - intent: ask_about_hiking_equipment #Hỏi về trang thiết bị leo núi.
+#   examples: |
+#     - Tôi cần mang theo trang thiết bị gì để leo núi?
+#     - Có những đồ dùng nào cần thiết cho chuyến leo núi?
+#     - Có lời khuyên nào về trang phục khi leo núi không?
+#     - Tôi có nên mang theo nước và thực phẩm không?
+#     - Trang thiết bị nào là bắt buộc cho việc leo núi ở đây?
+#     - Có cần mang theo thiết bị GPS khi leo núi không?
+#     - Có những loại giày leo núi nào tốt nhất?
+#     - Tôi có nên thuê trang thiết bị ở đây không?
+#     - Có thể tìm thấy trang thiết bị leo núi ở đâu gần đây?
+#     - Những món đồ nào giúp bảo đảm an toàn khi leo núi?
+
+# - intent: ask_about_special_events #Hỏi về các sự kiện đặc biệt.
+#   examples: |
+#     - Có sự kiện đặc biệt nào sắp diễn ra không?
+#     - Tôi muốn biết về các sự kiện đặc biệt ở đây.
+#     - Có chương trình nào đặc biệt cho khách du lịch không?
+#     - Có sự kiện gì thú vị trong tháng này không?
+#     - Các sự kiện đặc biệt có cần đặt trước không?
+#     - Tôi có thể tham gia sự kiện nào không?
+#     - Các sự kiện đặc biệt diễn ra vào ngày nào?
+#     - Có sự kiện nào cho trẻ em không?
+#     - Có các buổi hòa nhạc hoặc chương trình văn nghệ nào không?
+#     - Các sự kiện đặc biệt có vé vào cửa không?
+
+# - intent: ask_about_festival_dates  #Hỏi về ngày lễ hội.
+#   examples: |
+#     - Ngày lễ hội năm nay là khi nào?
+#     - Có lễ hội nào sẽ diễn ra trong tháng này không?
+#     - Tôi có thể tìm hiểu về lịch trình lễ hội ở đâu?
+#     - Lễ hội mùa hè sẽ diễn ra vào ngày nào?
+#     - Có những ngày lễ hội đặc biệt nào tôi cần biết không?
+#     - Tôi có thể tham gia lễ hội nào không?
+#     - Có lễ hội ẩm thực nào trong năm không?
+#     - Có sự kiện nào kỷ niệm lễ hội truyền thống không?
+#     - Các ngày lễ hội lớn có ảnh hưởng đến lịch trình không?
+#     - Có những lễ hội nào dành cho gia đình không?
+
+# - intent: ask_about_conference_rooms  # Hỏi về phòng hội nghị.
+#   examples: |
+#     - Khu du lịch có phòng hội nghị nào không?
+#     - Tôi có thể thuê phòng hội nghị ở đây không?
+#     - Có những tiện nghi nào trong phòng hội nghị?
+#     - Tôi cần đặt phòng hội nghị trước bao lâu?
+#     - Có thể tổ chức sự kiện lớn trong phòng hội nghị không?
+#     - Có dịch vụ hỗ trợ nào cho sự kiện không?
+#     - Diện tích phòng hội nghị là bao nhiêu?
+#     - Có phòng hội nghị dành cho bao nhiêu người không?
+#     - Có thể đặt phòng hội nghị cho sự kiện riêng tư không?
+#     - Tôi có thể xem hình ảnh phòng hội nghị ở đâu?
+
+
+# - intent: ask_about_event_spaces  #Hỏi về không gian tổ chức sự kiện.
+#   examples: |
+#     - Khu vực nào có thể tổ chức sự kiện ở đây?
+#     - Có không gian nào để tổ chức sự kiện ngoài trời không?
+#     - Tôi có thể tìm thấy thông tin về không gian tổ chức sự kiện ở đâu?
+#     - Có thể thuê không gian tổ chức sự kiện cho bao nhiêu người?
+#     - Những tiện nghi nào có sẵn trong không gian tổ chức sự kiện?
+#     - Có không gian nào phù hợp cho tiệc cưới không?
+#     - Tôi có thể tổ chức hội thảo trong không gian nào?
+#     - Có không gian nào gần hồ bơi không?
+#     - Có những hoạt động nào diễn ra trong không gian tổ chức sự kiện?
+#     - Thời gian cho thuê không gian tổ chức sự kiện là bao lâu?
+
+
+# - intent: ask_about_art_exhibitions  #Hỏi về các triển lãm nghệ thuật.
+#   examples: |
+#     - Có triển lãm nghệ thuật nào đang diễn ra không?
+#     - Tôi có thể tìm thông tin về các triển lãm nghệ thuật ở đâu?
+#     - Có những nghệ sĩ nào tham gia triển lãm nghệ thuật này?
+#     - Thời gian triển lãm nghệ thuật là khi nào?
+#     - Có thể mua vé vào xem triển lãm nghệ thuật không?
+#     - Triển lãm nghệ thuật có miễn phí không?
+#     - Có các triển lãm nghệ thuật nào dành cho trẻ em không?
+#     - Tôi có thể gặp gỡ các nghệ sĩ tại triển lãm không?
+#     - Có thể tham gia workshop tại triển lãm không?
+#     - Có lịch trình cho các sự kiện trong triển lãm không?

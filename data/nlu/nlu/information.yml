@@ -1,0 +1,200 @@
+
+
+
+# - intents: ask_about_event_schedule
+#   examples: |
+#     - Có lịch trình sự kiện nào sắp tới không?
+#     - Tôi muốn biết về các sự kiện diễn ra trong khu du lịch.
+#     - Có thông tin gì về thời gian và địa điểm của sự kiện không?
+#     - Khu du lịch có tổ chức sự kiện nào vào cuối tuần không?
+#     - Có thể cho tôi biết lịch trình các hoạt động trong tháng này không?
+#     - Tôi có thể xem lịch sự kiện trên website không?
+#     - Có sự kiện nào đặc biệt cho trẻ em không?
+#     - Lịch trình sự kiện có thay đổi không?
+#     - Có sự kiện nào miễn phí không?
+#     - Tôi có thể đăng ký tham gia sự kiện như thế nào?
+#     - Có thông tin gì về sự kiện văn hóa tại khu du lịch không?
+#     - Tôi cần biết thời gian tổ chức sự kiện thể thao.
+#     - Có ai sẽ diễn ra trong sự kiện này không?
+#     - Có sự kiện nào được livestream không?
+#     - Có lịch trình cho các buổi biểu diễn âm nhạc không?
+
+# - intents: ask_about_feedback
+#   examples: |
+#     - Có đánh giá nào từ khách hàng trước đó không?
+#     - Tôi muốn biết ý kiến của những khách đã đến khu du lịch.
+#     - Có thể chia sẻ phản hồi từ khách hàng không?
+#     - Khách hàng nói gì về trải nghiệm tại khu du lịch?
+#     - Tôi có thể tìm thấy đánh giá của khách hàng ở đâu?
+#     - Có phản hồi tích cực nào từ khách hàng không?
+#     - Khách hàng có gặp vấn đề gì không?
+#     - Có thể cho tôi biết về điểm mạnh và điểm yếu từ đánh giá của khách không?
+#     - Có ai đã từng phàn nàn về dịch vụ không?
+#     - Tôi muốn xem đánh giá tổng quan từ khách hàng về khu du lịch.
+#     - Có trang nào tổng hợp phản hồi từ khách hàng không?
+#     - Đánh giá của khách hàng có ảnh hưởng đến chất lượng dịch vụ không?
+#     - Tôi có thể để lại đánh giá của mình ở đâu?
+#     - Có thể chia sẻ câu chuyện từ khách hàng trước đây không?
+#     - Khách hàng có nói gì về các dịch vụ ăn uống tại khu du lịch không?
+
+# - intents: ask_about_safety_measures
+#   examples: |
+#     - Khu du lịch có các biện pháp an toàn nào không?
+#     - Tôi muốn biết về các quy định an toàn tại khu du lịch.
+#     - Có thông tin gì về các biện pháp phòng ngừa rủi ro không?
+#     - Khách tham quan có cần tuân theo quy định an toàn nào không?
+#     - Khu du lịch có trang bị thiết bị an toàn không?
+#     - Có ai sẽ hướng dẫn về an toàn trong các hoạt động không?
+#     - Tôi có thể tìm thấy thông tin về an toàn ở đâu?
+#     - Có quy trình nào để xử lý tình huống khẩn cấp không?
+#     - Khu du lịch có cung cấp bảo hiểm cho khách không?
+#     - Tôi có thể yên tâm về an toàn cá nhân khi đến khu du lịch không?
+#     - Có chương trình nào hướng dẫn khách về an toàn không?
+#     - Các biện pháp an toàn có thay đổi theo mùa không?
+#     - Tôi có thể mang theo thiết bị an toàn cá nhân không?
+#     - Khu du lịch có biện pháp nào để bảo vệ trẻ em không?
+#     - Có thông tin gì về an toàn thực phẩm tại khu du lịch không?
+
+# - intents: ask_about_nearby_attractions
+#   examples: |
+#     - Có điểm tham quan nào gần khu du lịch không?
+#     - Tôi muốn biết về các địa điểm thú vị lân cận.
+#     - Khu du lịch có gần các điểm tham quan nổi tiếng không?
+#     - Có thể cho tôi biết về các hoạt động gần đây không?
+#     - Tôi nên tham quan đâu khi ở gần khu du lịch?
+#     - Có gợi ý nào về các điểm đến gần khu du lịch không?
+#     - Có ai đã từng ghé thăm các điểm tham quan gần đó không?
+#     - Có những điểm lịch sử nào gần khu du lịch không?
+#     - Tôi có thể tìm thấy thông tin về các điểm tham quan gần đâu?
+#     - Có tour nào đưa khách đi tham quan các địa điểm lân cận không?
+#     - Khu du lịch có cung cấp bản đồ các điểm tham quan xung quanh không?
+#     - Có điểm tham quan nào dành cho trẻ em không?
+#     - Có nhà hàng hoặc quán cà phê nào gần đó không?
+#     - Có bãi biển hay công viên nào gần khu du lịch không?
+#     - Có sự kiện nào diễn ra ở các điểm tham quan lân cận không?
+
+# - intents: ask_about_transportation
+#   examples: |
+#     - Tôi có thể di chuyển đến khu du lịch bằng phương tiện nào?
+#     - Có các lựa chọn giao thông nào để đến khu du lịch không?
+#     - Khu du lịch có dịch vụ xe đưa đón không?
+#     - Tôi có thể sử dụng taxi hay xe buýt để đến khu du lịch không?
+#     - Có thông tin gì về các tuyến xe buýt đến khu du lịch không?
+#     - Khu du lịch có chỗ đậu xe cho khách không?
+#     - Có xe thuê nào gần khu du lịch không?
+#     - Có thể đi bộ đến khu du lịch không?
+#     - Tôi có cần phải đặt trước phương tiện di chuyển không?
+#     - Thời gian di chuyển từ trung tâm thành phố đến khu du lịch là bao lâu?
+#     - Có các dịch vụ vận chuyển nào vào các thời điểm cao điểm không?
+#     - Có thông tin gì về giá vé của các phương tiện di chuyển không?
+#     - Có điểm dừng xe buýt gần khu du lịch không?
+#     - Khu du lịch có hỗ trợ thông tin về phương tiện di chuyển không?
+#     - Tôi có thể sử dụng ứng dụng gọi xe nào để đến khu du lịch?
+
+# - intents: ask_about_weather
+#   examples: |
+#     - Thời tiết hôm nay ở khu du lịch như thế nào?
+#     - Tôi có thể mong đợi thời tiết gì khi đến khu du lịch?
+#     - Có dự báo thời tiết cho khu du lịch trong tuần này không?
+#     - Khu du lịch có thường xuyên mưa không?
+#     - Thời tiết vào mùa này ở khu du lịch ra sao?
+#     - Có nên mang theo ô hay áo mưa khi đến khu du lịch không?
+#     - Nhiệt độ trung bình ở khu du lịch là bao nhiêu?
+#     - Có thông tin gì về gió và độ ẩm tại khu du lịch không?
+#     - Tôi có thể kiểm tra thời tiết khu vực ở đâu?
+#     - Có sự kiện nào bị ảnh hưởng bởi thời tiết không?
+#     - Thời tiết có thay đổi bất ngờ không khi đến khu du lịch?
+#     - Tôi nên mặc gì khi tham quan khu du lịch trong thời tiết này?
+#     - Có bất kỳ cảnh báo thời tiết nào cho khu vực không?
+#     - Thời tiết buổi tối ở khu du lịch có khác gì không?
+#     - Có thể dự đoán thời tiết cho cuối tuần ở khu du lịch không?
+
+# - intents: ask_about_local_cuisine
+#   examples: |
+#     - Ẩm thực địa phương ở khu du lịch có gì đặc sắc?
+#     - Tôi nên thử món ăn nào khi đến khu du lịch?
+#     - Có nhà hàng nào phục vụ ẩm thực địa phương không?
+#     - Có món ăn truyền thống nào mà bạn gợi ý không?
+#     - Khu du lịch có tổ chức các buổi tiệc ẩm thực không?
+#     - Tôi có thể tìm thấy món ăn đường phố nào ở đây không?
+#     - Có các món ăn nào phù hợp cho người ăn chay không?
+#     - Có thông tin gì về các nguyên liệu địa phương không?
+#     - Món ăn nào được yêu thích nhất ở khu du lịch?
+#     - Có các lớp học nấu ăn địa phương nào không?
+#     - Có sự kiện nào liên quan đến ẩm thực trong khu vực không?
+#     - Các món ăn này có giá cả như thế nào?
+#     - Có quán cà phê nào nổi tiếng với ẩm thực địa phương không?
+#     - Món tráng miệng nào là đặc sản của khu vực này?
+#     - Khu du lịch có khuyến mãi nào liên quan đến ẩm thực không?
+
+# - intents: ask_about_nearby_shops
+#   examples: |
+#     - Có cửa hàng nào gần khu du lịch không?
+#     - Tôi có thể mua sắm ở đâu gần đây?
+#     - Có những cửa hàng nào chuyên bán đồ lưu niệm không?
+#     - Có siêu thị nào gần khu du lịch không?
+#     - Tôi có thể tìm thấy các cửa hàng thực phẩm gần đây không?
+#     - Có cửa hàng quần áo nào ở gần không?
+#     - Khu du lịch có cung cấp bản đồ các cửa hàng lân cận không?
+#     - Có quán cà phê nào gần đây không?
+#     - Có các cửa hàng tiện lợi nào gần khu du lịch không?
+#     - Có thể tìm thấy cửa hàng điện thoại hoặc thiết bị điện tử gần đây không?
+#     - Có những cửa hàng nào bán đồ handmade gần khu vực không?
+#     - Khu du lịch có tổ chức các chợ đêm không?
+#     - Có cửa hàng nào phục vụ ẩm thực địa phương không?
+#     - Có địa điểm nào để mua sắm đồ thể thao không?
+#     - Có cửa hàng nào có ưu đãi đặc biệt cho khách du lịch không?
+
+# - intents: ask_about_security_measures
+#   examples: |
+#     - Khu du lịch có những biện pháp an ninh nào không?
+#     - Tôi có thể cảm thấy an toàn ở khu du lịch này không?
+#     - Có camera giám sát trong khu vực không?
+#     - Khu du lịch có nhân viên an ninh không?
+#     - Có chính sách nào để bảo vệ khách du lịch không?
+#     - Nếu tôi gặp sự cố, tôi nên liên hệ với ai?
+#     - Khu du lịch có bảo vệ 24/7 không?
+#     - Có biện pháp nào để bảo vệ tài sản cá nhân không?
+#     - Khu du lịch có huấn luyện an ninh cho nhân viên không?
+#     - Có thông tin gì về các biện pháp phòng ngừa tội phạm không?
+#     - Nếu xảy ra thiên tai, khu du lịch có kế hoạch ứng phó ra sao?
+#     - Có những cách nào để tôi có thể đảm bảo an toàn cho bản thân?
+#     - Khu du lịch có quy định gì về an toàn cho trẻ em không?
+#     - Có dịch vụ giám sát cho trẻ em không?
+#     - Tôi nên làm gì nếu thấy điều gì nghi ngờ tại khu du lịch?
+
+# - intents: ask_about_health_and_safety
+#   examples: |
+#     - Khu du lịch có các quy định sức khỏe và an toàn nào không?
+#     - Tôi cần lưu ý điều gì về sức khỏe khi đến khu du lịch?
+#     - Có yêu cầu gì về tiêm phòng trước khi đến không?
+#     - Khu du lịch có các biện pháp phòng ngừa dịch bệnh không?
+#     - Có thông tin gì về an toàn thực phẩm tại khu du lịch không?
+#     - Tôi có thể tìm thấy dịch vụ y tế nào gần đây không?
+#     - Có các quy định nào về việc đeo khẩu trang trong khu vực không?
+#     - Khu du lịch có kế hoạch khẩn cấp trong trường hợp dịch bệnh không?
+#     - Tôi nên chuẩn bị gì về sức khỏe trước khi đến khu du lịch?
+#     - Có dịch vụ y tế nào hỗ trợ khách du lịch không?
+#     - Khu du lịch có quy định gì về an toàn cho trẻ em không?
+#     - Có các chương trình giáo dục sức khỏe nào tại khu du lịch không?
+#     - Có thông tin gì về chăm sóc sức khỏe tâm thần không?
+#     - Khu du lịch có tổ chức các hoạt động thể dục thể thao không?
+#     - Có cần thiết phải mang theo thuốc men khi đến không?
+
+# - intents: ask_about_local_customs
+#   examples: |
+#     - Tôi nên biết gì về phong tục địa phương khi đến khu du lịch?
+#     - Có phong tục nào mà tôi cần tôn trọng không?
+#     - Có những nghi lễ nào phổ biến ở khu vực này không?
+#     - Người dân địa phương có thói quen gì đặc biệt không?
+#     - Có lời khuyên nào về cách cư xử khi gặp người dân địa phương không?
+#     - Có phong tục nào liên quan đến ẩm thực mà tôi nên biết không?
+#     - Tôi có thể tham gia vào các lễ hội địa phương nào không?
+#     - Có những phong tục nào đặc trưng trong các dịp lễ hội không?
+#     - Có quy định gì về trang phục khi tham gia các sự kiện văn hóa không?
+#     - Khu vực này có truyền thống gì mà tôi nên tìm hiểu không?
+#     - Có các hoạt động nào giúp tôi hiểu hơn về văn hóa địa phương không?
+#     - Người dân địa phương có phong cách giao tiếp nào khác biệt không?
+#     - Tôi nên chuẩn bị gì để hòa nhập với văn hóa địa phương?
+#     - Có những địa điểm nào giúp tôi khám phá văn hóa và phong tục địa phương không?
+#     - Tôi nên tránh điều gì khi giao tiếp với người dân nơi đây?

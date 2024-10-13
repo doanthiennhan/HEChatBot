@@ -1,0 +1,61 @@
+version: "3.1"
+nlu:
+- intent: ask_about_activities # Hỏi về các hoạt động giải trí
+  examples: |
+    - Khu du lịch này có những hoạt động giải trí nào không?
+    - Tôi có thể tham gia các hoạt động gì khi đến đây?
+    - Có chương trình sự kiện nào diễn ra trong thời gian tôi ở đây không?
+    - Có các hoạt động thể thao nào được tổ chức không?
+    - Tôi có thể tham gia các tour khám phá nào không?
+    - Có các hoạt động văn hóa nào diễn ra không?
+
+
+# - intent: ask_about_hiking_trails 
+#   examples: |
+#     - Khu du lịch có những đường mòn leo núi nào không?
+#     - Tôi có thể tìm thấy các tuyến đường đi bộ nào ở đây?
+#     - Có thông tin gì về độ khó của các đường mòn không?
+#     - Có bản đồ đường mòn leo núi không?
+#     - Thời gian lý tưởng để đi leo núi ở khu vực này là khi nào?
+
+
+# - intent: ask_about_nightlife # Hỏi về các hoạt động ban đêm
+#   examples: |
+#     - Khu du lịch có những hoạt động ban đêm nào không?
+#     - Tôi có thể làm gì vào buổi tối ở đây?
+#     - Có các sự kiện nào diễn ra vào ban đêm không?
+#     - Có quán bar hoặc câu lạc bộ nào gần đây không?
+
+
+
+# - intent: ask_about_scenic_drives # Hỏi về các view ngắm cảnh
+#   examples: |
+#     - Khu du lịch có những tuyến đường ngắm cảnh nào không?
+#     - Tôi có thể lái xe qua những địa điểm nào đẹp ở đây?
+#     - Có bản đồ các tuyến đường ngắm cảnh không?
+#     - Đường nào là tốt nhất để ngắm cảnh trong khu vực này?
+#     - Có những điểm dừng chân nào trên các tuyến đường ngắm cảnh không?
+
+
+# - intent: ask_about_water_activities # Hỏi về các hoạt động dưới nước
+#   examples: |
+#     - Khu du lịch có các hoạt động dưới nước nào không?
+#     - Tôi có thể tham gia các môn thể thao dưới nước ở đây không?
+#     - Có những hoạt động giải trí nào liên quan đến nước không?
+#     - Có thể thuê thiết bị lặn hoặc chèo thuyền không?
+#     - Có các tour tổ chức hoạt động dưới nước không?
+   
+
+# - intent: ask_about_wildlife_sightings
+#   examples: |
+#     - Tôi có thể thấy những loài động vật hoang dã nào ở đây?
+#     - Có khu vực nào nổi tiếng với việc ngắm động vật hoang dã không?
+#     - Có thông tin gì về các loài động vật hoang dã trong khu vực này không?
+#     - Tôi có thể đi tour để ngắm động vật hoang dã không?
+#     - Có thời gian nào tốt nhất để thấy động vật hoang dã không?
+#     - Có những loại động vật nào được bảo tồn ở khu vực này?
+#     - Có thể gặp những loài động vật hoang dã nào vào ban đêm?
+#     - Có những biện pháp nào để bảo vệ động vật hoang dã trong khu vực không?
+#     - Tôi có thể tìm thấy các địa điểm để ngắm động vật hoang dã ở đâu?
+#     - Có sự kiện nào liên quan đến động vật hoang dã không?
+

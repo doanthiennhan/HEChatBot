@@ -1,0 +1,29 @@
+version: "3.1"
+nlu:
+# - intent: ask_about_safety_guidelines #Hỏi về hướng dẫn an toàn.
+#   examples: |
+#     - Có hướng dẫn an toàn nào tôi cần biết không?
+#     - Tôi nên làm gì để đảm bảo an toàn trong khu du lịch?
+#     - Có biện pháp an toàn nào cho du khách không?
+#     - Có quy định nào liên quan đến an toàn khi tham gia các hoạt động không?
+#     - Tôi có cần mặc trang phục đặc biệt để đảm bảo an toàn không?
+#     - Có thông tin nào về sơ cứu trong trường hợp khẩn cấp không?
+#     - Có cách nào để báo cáo tình huống khẩn cấp không?
+#     - Có hướng dẫn nào về an toàn cho trẻ em không?
+#     - Các biện pháp an toàn nào được áp dụng trong các hoạt động ngoài trời?
+#     - Có thông tin gì về an toàn thực phẩm không?
+
+# - intent: ask_about_environmental_policies #Hỏi về chính sách bảo vệ môi trường.
+#   examples: |
+#     - Khu du lịch có chính sách bảo vệ môi trường nào không?
+#     - Tôi có thể làm gì để giúp bảo vệ môi trường khi đến đây?
+#     - Có những biện pháp nào để giảm thiểu rác thải trong khu vực này?
+#     - Khu du lịch có sử dụng năng lượng tái tạo không?
+#     - Có chương trình nào về bảo tồn thiên nhiên không?
+#     - Chính sách bảo vệ động vật hoang dã của khu du lịch là gì?
+#     - Có những hoạt động nào khuyến khích du khách bảo vệ môi trường không?
+#     - Có thông tin gì về việc trồng cây hoặc phục hồi môi trường không?
+#     - Khu du lịch có sử dụng các sản phẩm thân thiện với môi trường không?
+#     - Tôi có thể tham gia vào các hoạt động bảo vệ môi trường nào không?
+
+

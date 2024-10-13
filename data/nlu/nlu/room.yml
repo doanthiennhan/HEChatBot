@@ -1,0 +1,153 @@
+version: "3.1"
+
+nlu:
+
+- intent: room_type
+  examples: |
+    - Khách sạn có những [room_type](room_type) nào?
+    - Tôi muốn biết có những [room_type](room_type) nào?
+    - Có những [room_type](room_type) nào?
+    - Hãy cho tôi danh sách [room_type](room_type).
+    - Những [room_type](room_type) nào hiện có?
+    - Bạn có thể cho tôi biết về các [room_type](room_type) không?
+
+- intent: price_of_all_room_types
+  examples: |
+    - giá của tất cả room_type
+    - giá của phòng [Couple](room_type)
+    - giá của phòng [Normal](room_type)
+    - giá của phòng [President](room_type)
+    - giá của phòng [Family](room_type)
+    - giá của phòng [Luxurious](room_type)
+    - giá của phòng [đơn](room_type)
+    - giá của phòng [đôi](room_type)
+    - giá của phòng [suite](room_type)
+    - giá của phòng [VIP](room_type)
+
+- intent: describe_room
+  examples: |
+    - mô tả tất cả room_type
+    - mô tả phòng [Couple](room_describe)
+    - mô tả phòng [Normal](room_describe)
+    - mô tả phòng [President](room_describe)
+    - mô tả phòng [Family](room_describe)
+    - mô tả phòng [Luxurious](room_describe)
+    - mô tả phòng [đơn](room_describe)
+    - mô tả phòng [đôi](room_describe)
+    - mô tả phòng [suite](room_describe)
+    - mô tả phòng [VIP](room_describe)
+    - hãy cho tôi biết về phòng [Couple](room_describe) có những gì
+    - hãy cho tôi biết về phòng [Normal](room_describe) có những gì
+    - hãy cho tôi biết về phòng [President](room_describe) có những gì
+    - hãy cho tôi biết về phòng [Family](room_describe) có những gì
+    - hãy cho tôi biết về phòng [Luxurious](room_describe) có những gì
+    - hãy cho tôi biết về phòng [đơn](room_describe) có những gì
+    - hãy cho tôi biết về phòng [đôi](room_describe) có những gì
+    - hãy cho tôi biết về phòng [suite](room_describe) có những gì
+    - hãy cho tôi biết về phòng [VIP](room_describe) có những gì
+
+
+- intent: ask_number_of_rooms
+  examples: |
+    - Khách sạn có bao nhiêu phòng?
+    - Tổng số phòng trong khách sạn là bao nhiêu?
+    - Có bao nhiêu phòng trong khách sạn của bạn?
+    - Số lượng phòng của khách sạn là bao nhiêu?
+    - Khách sạn có nhiều phòng không?
+    - Cho tôi biết số lượng phòng của khách sạn
+    - Khách sạn có quy mô như thế nào?
+    - Bạn có thể cho tôi biết số phòng của khách sạn không?
+    - Khách sạn có bao nhiêu phòng để đặt?
+    - Tôi muốn biết tổng số phòng trong khách sạn
+
+- intent: ask_available_rooms
+  examples: |
+    - Có phòng trống không?
+    - Bạn có thể cho tôi biết có phòng nào trống không?
+    - Hiện tại có phòng nào còn trống không?
+    - Tôi muốn biết tình trạng phòng trống.
+    - Có phòng nào đang có sẵn không?
+    - Xin cho biết có phòng nào trống không?
+    - Hãy cho tôi biết số lượng phòng trống.
+    - Tôi có thể đặt một phòng trống không?
+    - Có phòng đơn nào còn trống không?
+    - Tôi cần biết xem phòng VIP có trống không?
+    - Có phòng [đơn](room_type) nào trống không?
+    - Có phòng [đôi](room_type) nào trống không?
+    - Có phòng [family](room_type) nào còn trống không?
+    - Bạn có thể cho tôi biết xem có phòng [Luxurious](room_type) nào không?
+    - Có phòng [President](room_type) trống không?
+
+
+# - intent: book_accommodation # Hỏi về đặt phòng
+#   examples: |
+#     - Tôi muốn đặt chỗ ở.
+#     - Có thể giúp tôi đặt phòng không?
+#     - Làm thế nào để đặt phòng tại khu du lịch?
+#     - Tôi muốn đặt một phòng cho hai người.
+#     - Có phòng nào còn trống không?
+#     - Tôi muốn đặt phòng từ ngày [ngày] đến [ngày].
+   
+
+# - intent: make_booking # Hỏi đặt vé
+#   examples: |
+#     - Tôi muốn đặt vé vào cửa.
+#     - Có thể giúp tôi đặt dịch vụ không?
+#     - Làm thế nào để đặt vé cho tour du lịch?
+#     - Tôi muốn đặt vé cho [sự kiện/dịch vụ] vào ngày [ngày].
+#     - Có vé nào còn trống không?
+#     - Tôi muốn đặt chỗ cho [sự kiện] cho [số lượng người].
+#     - Có thể đặt vé qua mạng không?
+#     - Tôi muốn biết quy trình đặt vé.
+#     - Có thể hủy đặt vé không?
+#     - Tôi có thể thanh toán khi nào cho vé đã đặt?
+#     - Có chương trình khuyến mãi nào cho vé không?
+#     - Tôi muốn thay đổi thông tin đặt vé.
+#     - Có thể đặt vé cho trẻ em không?
+#     - Tôi muốn biết giá vé cho [sự kiện/dịch vụ].
+#     - Có dịch vụ nào đi kèm với vé không?
+
+# - intent: ask_about_reservation_process # Hỏi về quy trình đặt phòng
+#   examples: |
+#     - Quy trình đặt chỗ tại khu du lịch như thế nào?
+#     - Làm thế nào để thực hiện đặt phòng?
+#     - Có bước nào đặc biệt trong quy trình đặt chỗ không?
+#     - Tôi cần chuẩn bị gì để đặt chỗ?
+#     - Có thể đặt phòng trực tuyến không?
+#     - Có cần phải thanh toán trước khi đặt chỗ không?
+#     - Có thời gian xử lý nào cho việc đặt chỗ không?
+#     - Ai có thể giúp tôi với quy trình đặt chỗ?
+#     - Tôi có thể đặt chỗ qua điện thoại không?
+#     - Có chính sách hủy đặt chỗ trong quy trình không?
+#     - Tôi có thể thay đổi thông tin đặt chỗ không?
+#     - Có cần xác nhận đặt chỗ không?
+#     - Có yêu cầu đặc biệt nào khi đặt chỗ không?
+#     - Quy trình đặt chỗ cho nhóm lớn có khác gì không?
+#     - Có thể nhận được thông tin về đặt chỗ qua email không?
+
+# - intent: ask_about_checkout_process # Hỏi về quy trình trả phòng
+#   examples: |
+#     - Quy trình trả phòng tại khu du lịch như thế nào?
+#     - Tôi cần làm gì khi trả phòng?
+#     - Có thời gian cụ thể nào để trả phòng không?
+#     - Tôi có thể trả phòng sớm không?
+#     - Có phí nào nếu tôi trả phòng muộn không?
+#     - Ai sẽ kiểm tra phòng khi tôi trả phòng?
+   
+# - intent: ask_about_cancellation_policy # Hỏi về chính sách hủy đặt chỗ
+#   examples: |
+#     - Chính sách hủy đặt chỗ của khu du lịch như thế nào?
+#     - Có phí hủy nào không?
+#     - Tôi có thể hủy đặt chỗ không?
+#     - Có thời gian nào để hủy đặt chỗ mà không mất phí không?
+#     - Tôi cần thông báo trước bao lâu để hủy đặt chỗ?
+#     - Có thể hủy đặt chỗ qua điện thoại không?
+#     - Hủy đặt chỗ có ảnh hưởng đến khoản thanh toán không?
+#     - Tôi có thể nhận lại tiền khi hủy không?
+#     - Có thể thay đổi đặt chỗ thay vì hủy không?
+#     - Có chính sách đặc biệt nào cho khách hàng khi hủy đặt chỗ không?
+#     - Tôi cần biết quy trình hủy đặt chỗ.
+#     - Có thể hủy đặt chỗ cho nhóm lớn không?
+#     - Hủy đặt chỗ có cần phải có lý do không?
+#     - Tôi đã đặt phòng qua mạng, có thể hủy không?
+#     - Có thời hạn nào cho việc hủy đặt chỗ không?

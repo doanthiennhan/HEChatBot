@@ -1,0 +1,52 @@
+version: "3.1"
+
+nlu:
+- intent: ask_about_location
+  examples: |
+    - Khu du lịch nằm ở đâu?
+    - Tôi muốn biết địa chỉ của khu du lịch.
+    - Có cách nào để đến khu du lịch không?
+    - Khu du lịch có gần trung tâm thành phố không?
+    - Có phương tiện công cộng nào đến khu du lịch không?
+    - Tôi có thể đi bằng taxi đến khu du lịch không?
+    - Có chỉ dẫn nào để đến khu du lịch không?
+    - Thời gian đi từ sân bay đến khu du lịch là bao lâu?
+    - Có bãi đậu xe tại khu du lịch không?
+    - Tôi có thể sử dụng Google Maps để tìm đường đến khu du lịch không?
+    - Khu du lịch có nằm gần các điểm tham quan khác không?
+    - Có tuyến xe buýt nào đến khu du lịch không?
+    - Tôi nên đi từ đâu để đến khu du lịch nhanh nhất?
+    - Có thông tin gì về việc di chuyển đến khu du lịch không?
+    - Có cổng vào nào riêng cho khách đến khu du lịch không?
+
+
+- intent: ask_about_opening_hours
+  examples: |
+    - Khu du lịch mở cửa lúc mấy giờ?
+    - Giờ mở cửa của khu du lịch là gì?
+    - Có thay đổi gì về giờ mở cửa trong mùa lễ không?
+    - Khu du lịch có mở cửa vào ngày lễ không?
+    - Tôi có thể đến khu du lịch vào buổi tối không?
+    - Giờ mở cửa có khác nhau theo mùa không?
+    - Có giờ đóng cửa không?
+    - Khu du lịch có mở cửa vào cuối tuần không?
+    - Tôi cần biết giờ mở cửa cho các dịch vụ bên trong khu du lịch.
+    - Có thông tin gì về giờ mở cửa cho các hoạt động đặc biệt không?
+    - Có khung giờ nào áp dụng cho khách tham quan không?
+    - Tôi có thể kiểm tra giờ mở cửa trên website không?
+    - Khu du lịch có giờ mở cửa nào đặc biệt cho nhóm không?
+    - Giờ mở cửa có thể thay đổi không?
+    - Có thông tin gì về việc đặt trước giờ tham quan không?
+    
+- intent: ask_about_return_policy 
+  examples: |
+    - Khu du lịch có chính sách hoàn tiền không?
+    - Tôi có thể hoàn tiền cho vé đã mua không?
+    - Có điều kiện gì để được hoàn tiền không?
+    - Tôi cần làm gì để yêu cầu hoàn tiền?
+    - Chính sách hoàn tiền cho các dịch vụ khác nhau là gì?
+    - Có thời hạn nào cho việc yêu cầu hoàn tiền không?
+    - Nếu tôi không hài lòng với dịch vụ, tôi có thể yêu cầu hoàn tiền không?
+    - Khu du lịch có chính sách hoàn tiền cho vé vào cửa không?
+    - Tôi có thể tìm thấy thông tin về chính sách hoàn tiền ở đâu?
+    - Có trường hợp nào không được hoàn tiền không?

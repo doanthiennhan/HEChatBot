@@ -1,14 +1,19 @@
-# The config recipe.
 recipe: default.v1
 
-# The assistant project unique identifier
 assistant_id: 20240921-013310-antique-mole
 
-# Configuration for Rasa NLU.
 language: vi
 pipeline:
   - name: WhitespaceTokenizer
   - name: RegexFeaturizer
+    case_sensitive: true
+    known_patterns:
+       - name: "numberPhone"
+         pattern: "\\b\\d{10}\\b"
+       - name: "gmail"
+         pattern: "\\b[\\w._%+-]+@[\\w.-]+\\.com\\b"  
+       - name: "email"
+         pattern: "\\b[\\w._%+-]+@[\\w.-]+\\.[a-zA-Z]{2,6}\\b"
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
     analyzer: char_wb
@@ -23,10 +28,9 @@ pipeline:
     epochs: 100
     constrain_similarities: true
   - name: FallbackClassifier
-    threshold: 0.3
+    threshold: 0.96  
     ambiguity_threshold: 0.1
-
-# Configuration for Rasa Core.
+ 
 policies:
   - name: MemoizationPolicy
   - name: RulePolicy

@@ -3,17 +3,39 @@ actions:
 - action_list_services
 - action_list_service_error
 - action_event_details
-- action_print_user_question
 - ask_about_activities
 - action_get_room_prices
 - action_get_room_details
 - action_get_room_count
 - action_get_empty_rooms
-- action_get_return_policy
+- action_get_location
+- action_get_opening_hours
+- action_get_return_faq
+- action_set_user_name
+# - action_food_services
+# - action_guide_services
+# - action_shuttle_services
+# - action_laundry_services
+# - action_vip_services
+# - action_child_friendly_services
+# - action_wifi_services
+# - action_pet_policy
+# - action_accessibility_services
+# - action_hiking_trails
+# - action_nightlife
+# - action_health_services
+# - action_scenic_drives
+# - action_water_activities
+# - action_wildlife_sightings
 
 entities:
+- name
 - service_list
 - num_services
+- numberPhone
+- gmail
+- email
+
 intents:
 - greet
 - goodbye
@@ -23,6 +45,7 @@ intents:
 - mood_unhappy
 - bot_challenge
 - ask_about_services
+- provide_name
 # - ask_about_food_services
 # - ask_about_guide_services
 # - ask_about_shuttle_services
@@ -46,8 +69,8 @@ intents:
 # - ask_about_special_offers
 # - ask_about_group_discounts
 # - ask_about_discount_codes
-# - ask_about_location
-# - ask_about_opening_hours
+- ask_about_location
+- ask_about_opening_hours
 # - ask_about_event_schedule
 # - ask_about_feedback
 # - ask_about_safety_measures
@@ -59,12 +82,11 @@ intents:
 # - ask_about_security_measures
 # - ask_about_health_and_safety
 # - ask_about_local_customs
-# - ask_about_activities
+- ask_about_activities
 # - ask_about_hiking_trails
 # - ask_about_nightlife
 - ask_about_events
 # - ask_about_scenic_drives
-# - ask_about_fitness_activities
 # - ask_about_water_activities
 # - ask_about_family_friendly_activities
 # - ask_about_activities_for_kids
@@ -89,9 +111,9 @@ intents:
 # - ask_about_frequent_questions
 # - ask_about_safety_guidelines
 # - ask_about_environmental_policies
-- ask_about_return_policy
 - room_type
 - describe_room
+- ask_about_return_policy
 - price_of_all_room_types
 - ask_number_of_rooms
 - ask_available_rooms
@@ -104,7 +126,7 @@ responses:
   - text: Điều đó có giúp ích được cho bạn không?
   utter_error:
   - text: Xin lỗi, tôi không thể trả lời câu hỏi này .
-  - text: Xin lỗi, hiện giờ tôi chưa thể trả lời được câu hỏi này . .
+  - text: Xin lỗi, hiện giờ tôi chưa thể trả lời được câu hỏi này . 
   - text: Tôi không thể trả lời được câu hỏi này. Xin lỗi vì sự bất tiện này .
   utter_goodbye:
   - text: Tạm biệt, hẹn gặp lại bạn!
@@ -122,8 +144,33 @@ responses:
   - text: Khu du lịch của chúng tôi {combined_data} Bạn muốn biết thông tin về dịch vụ nào?
   - text: Khu du lịch chúng tôi {combined_data} Bạn muốn biết thêm thông tin về dịch vụ nào không?
   - text: Chào mừng bạn đến với khu du lịch {combined_data} Có dịch vụ nào bạn muốn biết thêm không?
+  
   utter_ask_about_return_policy:
   - text: Chính sách hoàn tiền của khu du lịch là {combined_data}
+  - text: Chính sách hoàn tiền tại khu du lịch được quy định như sau {combined_data}.
+  - text: Chính sách hoàn tiền của khu du lịch chúng tôi là {combined_data}.
+  - text: Khu du lịch áp dụng chính sách hoàn tiền theo quy định {combined_data}
+  utter_ask_about_opening_hours:
+  - text: Khu du lịch mở cửa vào thời gian {combined_data} Chúc bạn có một chuyến đi thật vui và thú vị!
+  - text: Bạn có thể đến khu du lịch vào thời gian {combined_data} Chúc bạn có chuyến vui chơi vui vẻ
+  - text: Hãy đến khám phá khu du lịch vào thời gian {combined_data} Chúc bạn có những giây phút thư giãn tuyệt vời!
+  - text: Bạn có thể đến thăm khu du lịch vào lúc {combined_data} Hy vọng bạn sẽ có một chuyến đi đầy thú vị và niềm vui!
+  - text: Khu du lịch của chúng tôi mở cổng vào thời gian {combined_data} Bạn có thể đến đây vào thời gian này
+  
+  utter_ask_about_location:
+  - text: Khu du lịch của chúng tôi ở địa chỉ {combined_data} Chúc bạn có một chuyến đi thật vui và thú vị!
+  - text: Khu du lịch chúng tôi tọa lạc tại {combined_data} Chúc bạn có một chuyến đi thật vui và ý nghĩa!
+  - text: Địa chỉ khu du lịch là {combined_data} Chúc bạn có một ngày khám phá tuyệt vời và tràn đầy niềm vui!
+  - text: Địa điểm khu du lịch của chúng tôi là {combined_data} Hy vọng bạn sẽ có một chuyến đi thú vị và nhiều kỷ niệm!
+  
+  utter_fallback:
+  - text: "Xin lỗi, tôi không hiểu câu hỏi của bạn."
+  - text: "Xin lỗi, tôi không thể trả lời câu hỏi của bạn."
+  - text: "Xin lỗi, tôi không thể trả lời được câu hỏi này. Xin lỗi vì sự bất tiện này."
+  
+  utter_ask_about_name:
+  - text: "Chào {name} , Tôi có thể giúp gì cho bạn"
+
 session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 60
@@ -139,4 +186,23 @@ slots:
       video: "https://www.example.com/video.mp4"
     mappings:
       - type: from_text
-
+  numberPhone:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+  gmail:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+  email:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+  name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text

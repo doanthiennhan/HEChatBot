@@ -1,0 +1,60 @@
+# version: "3.1"
+
+# nlu:
+
+
+# - intent: make_booking # Hỏi đặt vé
+#   examples: |
+#     - Tôi muốn đặt vé vào cửa.
+#     - Có thể giúp tôi đặt dịch vụ không?
+#     - Làm thế nào để đặt vé cho tour du lịch?
+#     - Tôi muốn đặt vé cho [sự kiện/dịch vụ] vào ngày [ngày].
+#     - Có vé nào còn trống không?
+#     - Tôi muốn đặt chỗ cho [sự kiện] cho [số lượng người].
+#     - Có thể đặt vé qua mạng không?
+#     - Tôi muốn biết quy trình đặt vé.
+#     - Có thể hủy đặt vé không?
+#     - Tôi có thể thanh toán khi nào cho vé đã đặt?
+#     - Có chương trình khuyến mãi nào cho vé không?
+#     - Tôi muốn thay đổi thông tin đặt vé.
+#     - Có thể đặt vé cho trẻ em không?
+#     - Tôi muốn biết giá vé cho [sự kiện/dịch vụ].
+#     - Có dịch vụ nào đi kèm với vé không?
+
+ 
+
+# - intent: ask_about_checkout_process # Hỏi về quy trình trả phòng
+#   examples: |
+#     - Quy trình trả phòng tại khu du lịch như thế nào?
+#     - Tôi cần làm gì khi trả phòng?
+#     - Có thời gian cụ thể nào để trả phòng không?
+#     - Tôi có thể trả phòng sớm không?
+#     - Có phí nào nếu tôi trả phòng muộn không?
+#     - Ai sẽ kiểm tra phòng khi tôi trả phòng?
+#     - Có cần phải thanh toán thêm khi trả phòng không?
+#     - Tôi có thể yêu cầu hóa đơn khi trả phòng không?
+#     - Có thể để lại hành lý sau khi trả phòng không?
+#     - Tôi có thể nhận lại tiền cọc khi trả phòng không?
+#     - Có cần thông báo trước khi trả phòng không?
+#     - Quy trình trả phòng cho nhóm lớn có khác gì không?
+#     - Tôi có thể trả phòng qua điện thoại không?
+#     - Có thể yêu cầu dịch vụ taxi khi trả phòng không?
+#     - Có chính sách đặc biệt nào cho khách hàng khi trả phòng không?
+
+# - intent: ask_about_cancellation_policy # Hỏi về chính sách hủy đặt chỗ
+#   examples: |
+#     - Chính sách hủy đặt chỗ của khu du lịch như thế nào?
+#     - Có phí hủy nào không?
+#     - Tôi có thể hủy đặt chỗ không?
+#     - Có thời gian nào để hủy đặt chỗ mà không mất phí không?
+#     - Tôi cần thông báo trước bao lâu để hủy đặt chỗ?
+#     - Có thể hủy đặt chỗ qua điện thoại không?
+#     - Hủy đặt chỗ có ảnh hưởng đến khoản thanh toán không?
+#     - Tôi có thể nhận lại tiền khi hủy không?
+#     - Có thể thay đổi đặt chỗ thay vì hủy không?
+#     - Có chính sách đặc biệt nào cho khách hàng khi hủy đặt chỗ không?
+#     - Tôi cần biết quy trình hủy đặt chỗ.
+#     - Có thể hủy đặt chỗ cho nhóm lớn không?
+#     - Hủy đặt chỗ có cần phải có lý do không?
+#     - Tôi đã đặt phòng qua mạng, có thể hủy không?
+#     - Có thời hạn nào cho việc hủy đặt chỗ không?

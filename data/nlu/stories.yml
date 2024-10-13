@@ -1,0 +1,100 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Người dùng hỏi về dịch vụ
+  steps:
+  - intent: ask_about_services
+  - action: action_list_services
+  - slot_was_set:
+    - combined_data 
+  - action: utter_ask_about_services
+
+
+
+- story: hỏi về các sự kiện trong khu du lịch
+  steps:
+  - intent: ask_about_events
+  - action: action_event_details
+
+
+
+- story: Room prices
+  steps:
+    - intent: price_of_all_room_types
+    - action: action_get_room_prices
+
+- story: Describe room
+  steps:
+    - intent: describe_room
+    - action: action_get_room_details
+
+- story: Ask for room count
+  steps:
+    - intent: ask_number_of_rooms
+    - action: action_get_room_count
+
+- story: Ask for empty rooms
+  steps:
+    - intent: ask_available_rooms
+    - action: action_get_empty_rooms
+
+- story: Ask for return policy
+  steps:
+    - intent: ask_about_return_policy
+    - action: action_get_return_faq
+    - action: utter_ask_about_return_policy
+
+- story: hỏi về giờ mở cổng
+  steps:
+    - intent: ask_about_opening_hours
+    - action: action_get_return_faq
+    - action: utter_ask_about_opening_hours
+
+- story: hỏi về địa chỉ
+  steps:
+    - intent: ask_about_location
+    - action: action_get_return_faq
+    - action: utter_ask_about_location
+
+- story: hỏi về tên
+  steps:
+    - intent: provide_name
+    - action: action_set_user_name
+    - action: utter_ask_about_name
+
+# - story: Ask for empty rooms with check-in date 
+#   steps:
+#     - intent: ask_for_empty_rooms_with_checkin
+#     - action: action_get_rooms_by_checkin_and_roomtype
+
+
+
+  

@@ -1,0 +1,56 @@
+version: "3.1"
+
+rules:
+  - rule: Respond to goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Respond to bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Provide services information
+    steps:
+      - intent: ask_about_services
+      - action: action_list_services
+      - slot_was_set:
+        - combined_data 
+      - action: utter_ask_about_services
+
+  - rule: hỏi về chính sách hoàn tiền
+    steps:
+      - intent: ask_about_return_policy
+      - action: action_get_return_faq
+      - action: utter_ask_about_return_policy
+
+  - rule: hỏi về giờ mở cổng
+    steps:
+      - intent: ask_about_opening_hours
+      - action: action_get_return_faq
+      - action: utter_ask_about_opening_hours
+
+  - rule: hỏi về địa chỉ
+    steps:
+      - intent: ask_about_location
+      - action: action_get_return_faq
+      - action: utter_ask_about_location
+      
+
+  - rule: hỏi về sự kiện  
+    steps:
+      - intent: ask_about_events
+      - action: action_event_details
+
+  - rule: hỏi về tên
+    steps:
+      - intent: provide_name
+      - action: action_set_user_name
+      - action: utter_ask_about_name
+
+  - rule: Handle fallback
+    steps:
+      - intent: nlu_fallback
+      - action: utter_fallback
+  
