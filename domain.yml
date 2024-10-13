@@ -117,6 +117,26 @@ intents:
 - price_of_all_room_types
 - ask_number_of_rooms
 - ask_available_rooms
+- ask_discount_for_early_booking
+- ask_check_in_time
+- ask_check_out_time
+- ask_services_hotel_offered
+- ask_request_room_service
+- ask_amenities_inquiry
+- ask_location_information
+- ask_special_offers
+- ask_discount_now
+- ask_payment_methods
+- ask_late_check_in
+- ask_early_check_out
+- ask_extend_stay
+- ask_transportation_service
+- ask_loyalty_program
+- ask_cancellation_policy
+- ask_contact_reception
+- ask_local_activities
+- ask_parking
+- ask_dining_options
 
 responses:
   utter_cheer_up:
@@ -147,30 +167,6 @@ responses:
   
   utter_ask_about_return_policy:
   - text: Chính sách hoàn tiền của khu du lịch là {combined_data}
-  - text: Chính sách hoàn tiền tại khu du lịch được quy định như sau {combined_data}.
-  - text: Chính sách hoàn tiền của khu du lịch chúng tôi là {combined_data}.
-  - text: Khu du lịch áp dụng chính sách hoàn tiền theo quy định {combined_data}
-  utter_ask_about_opening_hours:
-  - text: Khu du lịch mở cửa vào thời gian {combined_data} Chúc bạn có một chuyến đi thật vui và thú vị!
-  - text: Bạn có thể đến khu du lịch vào thời gian {combined_data} Chúc bạn có chuyến vui chơi vui vẻ
-  - text: Hãy đến khám phá khu du lịch vào thời gian {combined_data} Chúc bạn có những giây phút thư giãn tuyệt vời!
-  - text: Bạn có thể đến thăm khu du lịch vào lúc {combined_data} Hy vọng bạn sẽ có một chuyến đi đầy thú vị và niềm vui!
-  - text: Khu du lịch của chúng tôi mở cổng vào thời gian {combined_data} Bạn có thể đến đây vào thời gian này
-  
-  utter_ask_about_location:
-  - text: Khu du lịch của chúng tôi ở địa chỉ {combined_data} Chúc bạn có một chuyến đi thật vui và thú vị!
-  - text: Khu du lịch chúng tôi tọa lạc tại {combined_data} Chúc bạn có một chuyến đi thật vui và ý nghĩa!
-  - text: Địa chỉ khu du lịch là {combined_data} Chúc bạn có một ngày khám phá tuyệt vời và tràn đầy niềm vui!
-  - text: Địa điểm khu du lịch của chúng tôi là {combined_data} Hy vọng bạn sẽ có một chuyến đi thú vị và nhiều kỷ niệm!
-  
-  utter_fallback:
-  - text: "Xin lỗi, tôi không hiểu câu hỏi của bạn."
-  - text: "Xin lỗi, tôi không thể trả lời câu hỏi của bạn."
-  - text: "Xin lỗi, tôi không thể trả lời được câu hỏi này. Xin lỗi vì sự bất tiện này."
-  
-  utter_ask_about_name:
-  - text: "Chào {name} , Tôi có thể giúp gì cho bạn"
-
 session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 60

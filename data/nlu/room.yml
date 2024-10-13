@@ -77,3 +77,262 @@ nlu:
     - Có phòng [family](room_type) nào còn trống không?
     - Bạn có thể cho tôi biết xem có phòng [Luxurious](room_type) nào không?
     - Có phòng [President](room_type) trống không?
+
+
+- intent: hỏi phòng trống với ngày check_in
+  examples: |
+    - Ngày [6 tháng 10](check_in_date) có phòng [đơn](room_type) trống nào không?
+    - Ngày [6/10](check_in_date) có phòng [đôi](room_type) còn trống không?
+    - Tôi muốn biết ngày [6 tháng 10](check_in_date) có phòng [VIP](room_type) không?
+    - Có phòng [Couple](room_type) trống vào ngày [6 tháng 10](check_in_date) không?
+    - Khách sạn có phòng [Normal](room_type) vào ngày [6 tháng 10](check_in_date) không?
+    - Tôi cần phòng [President](room_type) vào ngày [6 tháng 10](check_in_date), có còn trống không?
+    - Ngày [6/10](check_in_date) còn phòng [Family](room_type) nào không?
+    - Cho tôi biết ngày [6 tháng 10](check_in_date) có phòng [Luxurious](room_type) không?
+    - Tôi muốn đặt phòng [Couple](room_type) cho ngày [6/10](check_in_date), còn trống không?
+    - Ngày [6/10](check_in_date) khách sạn còn phòng [Normal](room_type) không?
+    - Phòng [đơn](room_type) vào ngày [6 tháng 10](check_in_date) còn trống không?
+    - Ngày [6 tháng 10](check_in_date) còn phòng [President](room_type) nào không?
+
+
+- intent: ask_discount_for_early_booking
+  examples: |
+    - Có giảm giá nếu tôi đặt phòng sớm không?
+    - Tôi có được giảm giá nếu đặt trước không?
+    - Khách sạn có chương trình khuyến mãi nào không?
+    - Có ưu đãi giảm giá khi đặt phòng trước không?
+    - Đặt phòng sớm có được giảm giá không?
+    - Có khuyến mãi gì nếu tôi đặt phòng trước 1 tuần không?
+    - Tôi có được giảm giá khi đặt trước không?
+    - Khách sạn có áp dụng giảm giá cho khách đặt phòng sớm không?
+    - Tôi được ưu đãi gì nếu đặt phòng sớm?
+    - Khách sạn có giảm giá nếu tôi đặt phòng trước bao nhiêu ngày?
+
+- intent: ask_booking_room
+  examples: |
+    - Tôi muốn đặt một phòng
+    - Làm sao để đặt phòng?
+    - Tôi cần đặt một phòng
+    - Đặt phòng cho tôi
+    - Tôi phải làm gì để đặt phòng?
+    - Tôi có thể đặt phòng online được không?
+    - Có cách nào để đặt phòng không?
+    - Tôi muốn biết cách đặt phòng
+    - Tôi có thể gọi điện để đặt phòng không?
+    - Tôi có thể đặt phòng qua website không?
+
+- intent: ask_check_in_time
+  examples: |
+    - Giờ nhận phòng của khách sạn là mấy giờ?
+    - Khi nào tôi có thể nhận phòng?
+    - Thời gian nhận phòng là từ khi nào?
+    - Tôi có thể nhận phòng lúc 3 giờ chiều không?
+    - Khách sạn có cho phép nhận phòng sớm không?
+    - Cho tôi biết giờ nhận phòng nhé.
+    - Nhận phòng bắt đầu từ mấy giờ?
+
+- intent: ask_check_out_time
+  examples: |
+    - Giờ trả phòng của khách sạn là mấy giờ?
+    - Khi nào tôi cần trả phòng?
+    - Thời gian trả phòng là khi nào?
+    - Tôi có thể trả phòng lúc mấy giờ?
+
+- intent: ask_services_hotel_offered
+  examples: |
+    - Khách sạn có cung cấp những dịch vụ nào?
+    - Dịch vụ của khách sạn bao gồm những gì?
+    - Khách sạn có các dịch vụ gì vậy?
+    - Những tiện nghi mà khách sạn cung cấp là gì?
+    - Tôi có thể sử dụng những dịch vụ nào tại khách sạn?
+    - Các dịch vụ của khách sạn gồm những gì?
+    - Khách sạn có cung cấp dịch vụ spa không?
+    - Có dịch vụ giặt là tại khách sạn không?
+    - Khách sạn có nhà hàng hoặc quầy bar không?
+    - Khách sạn có dịch vụ đưa đón sân bay không?
+
+
+- intent: ask_request_room_service
+  examples: |
+    - Tôi có thể yêu cầu dịch vụ phòng được không?
+    - Làm sao để đặt dịch vụ phòng?
+    - Có thể gọi dịch vụ phòng không?
+    - Tôi muốn đặt đồ ăn qua dịch vụ phòng.
+    - Khách sạn có dịch vụ phòng không?
+    - Dịch vụ phòng có hoạt động không?
+    - Tôi cần gọi dịch vụ phòng, bạn có thể giúp không?
+    - Cách nào để yêu cầu dịch vụ phòng?
+    - Tôi muốn sử dụng dịch vụ phòng, phải làm sao?
+    - Làm sao để liên hệ với dịch vụ phòng?
+  
+- intent: ask_amenities_inquiry
+  examples: |
+    - Khách sạn có những tiện nghi gì?
+    - Khách sạn cung cấp các tiện nghi nào?
+    - Tôi có thể sử dụng tiện nghi gì trong khách sạn?
+    - Khách sạn có phòng gym không?
+    - Khách sạn có hồ bơi không?
+    - Khách sạn có spa không?
+    - Khách sạn có dịch vụ đưa đón không?
+    - Tiện nghi trong phòng khách sạn bao gồm những gì?
+    - Có bãi đỗ xe không?
+    - Khách sạn có Wi-Fi miễn phí không?
+    - Khách sạn có tiện nghi cho trẻ em không?
+    - Có dịch vụ giặt ủi không?
+
+- intent: ask_location_information
+  examples: |
+    - Khách sạn nằm ở đâu?
+    - Vị trí khách sạn như thế nào?
+    - Khách sạn tọa lạc ở đâu?
+    - Làm sao để đến được khách sạn?
+    - Khách sạn gần những địa điểm nổi tiếng nào?
+    - Tôi có thể tìm khách sạn ở địa chỉ nào?
+    - Địa chỉ cụ thể của khách sạn là gì?
+    - Khách sạn nằm ở khu vực nào?
+    - Làm thế nào để tới được khách sạn?
+    - Khách sạn có gần trung tâm thành phố không?
+
+- intent: ask_special_offers
+  examples: |
+    - Khách sạn có chương trình khuyến mãi nào không?
+    - Hiện tại có ưu đãi nào cho khách đặt phòng không?
+    - Tôi có thể nhận được giảm giá nào không?
+    - Có chương trình khuyến mãi nào đang diễn ra không?
+    - Tôi có thể biết thêm về các ưu đãi hiện có không?
+    - Có giảm giá cho khách hàng thân thiết không?
+    - Chương trình khuyến mãi cho mùa lễ hội này là gì?
+    - Tôi có thể đặt phòng với giá ưu đãi nào không?
+    - Khách sạn có ưu đãi nào cho khách đoàn không?
+    - Có chương trình giảm giá cho đặt phòng qua mạng không?
+
+
+- intent: ask_discount_now
+  examples: |
+    - Nếu bây giờ đặt phòng khách sạn, có giảm giá gì không?
+    - Đặt phòng ngay bây giờ có được ưu đãi nào không?
+    - Hiện tại có khuyến mãi gì nếu tôi đặt phòng ngay không?
+    - Nếu tôi đặt phòng ngay bây giờ, có chương trình giảm giá nào không?
+    - Có ưu đãi nào cho khách đặt phòng ngay bây giờ không?
+    - Tôi có thể nhận được giảm giá nào khi đặt phòng ngay không?
+    - Đặt phòng khách sạn bây giờ có chương trình khuyến mãi gì không?
+    - Nếu tôi đặt phòng ngay bây giờ, có giảm giá nào không?
+    - Có chương trình khuyến mãi nào cho việc đặt phòng ngay không?
+    - Khách sạn có ưu đãi gì cho khách hàng đặt phòng ngay bây giờ không?
+
+- intent: ask_payment_methods
+  examples: |
+    - Khách sạn chấp nhận những phương thức thanh toán nào?
+    - Tôi có thể thanh toán bằng cách nào khi đặt phòng?
+    - Có những hình thức thanh toán nào được chấp nhận?
+    - Tôi có thể sử dụng thẻ tín dụng hay không?
+    - Có thể thanh toán bằng tiền mặt không?
+    - Các phương thức thanh toán mà khách sạn chấp nhận là gì?
+    - Thanh toán qua ứng dụng có được không?
+    - Tôi muốn biết về các phương thức thanh toán của khách sạn.
+
+- intent: ask_late_check_in
+  examples: |
+    - Tôi có thể nhận phòng muộn hơn giờ quy định không?
+    - Nếu tôi đến khách sạn sau 10 giờ tối thì sao?
+    - Khách sạn có cho phép nhận phòng trễ không?
+    - Tôi có thể làm thủ tục nhận phòng vào lúc mấy giờ?
+    - Có cách nào để tôi có thể nhận phòng muộn hơn không?
+    - Nếu tôi đến muộn, tôi có thể nhận phòng không?
+
+- intent: ask_early_check_out
+  examples: |
+    - Tôi có thể trả phòng sớm hơn giờ quy định không?
+    - Nếu tôi muốn rời khỏi khách sạn trước 12 giờ thì sao?
+    - Khách sạn có cho phép trả phòng sớm không?
+    - Tôi cần trả phòng sớm, có vấn đề gì không?
+    - Có thể trả phòng trước thời gian quy định không?
+
+- intent: ask_extend_stay
+  examples: |
+    - Tôi muốn gia hạn thời gian lưu trú tại khách sạn.
+    - Có thể giúp tôi gia hạn thêm ngày không?
+    - Tôi muốn ở lại lâu hơn, phải làm thế nào?
+    - Tôi có thể gia hạn thời gian đặt phòng không?
+    - Nếu tôi muốn gia hạn thêm một đêm thì sao?
+
+- intent: ask_transportation_service
+  examples: |
+    - Khách sạn có dịch vụ đưa đón không?
+    - Tôi có thể yêu cầu dịch vụ đưa đón đến sân bay không?
+    - Có xe đưa đón cho khách không?
+    - Dịch vụ đưa đón hoạt động như thế nào?
+    - Tôi muốn biết về dịch vụ vận chuyển của khách sạn.
+
+- intent: ask_loyalty_program
+  examples: |
+    - Khách sạn có chương trình khách hàng thân thiết không?
+    - Tôi muốn biết về các ưu đãi cho khách hàng thân thiết.
+    - Làm thế nào để tôi tham gia chương trình khách hàng thân thiết?
+    - Chương trình khách hàng thân thiết có lợi ích gì?
+    - Tôi đã ở lại nhiều lần, có ưu đãi nào cho tôi không?
+
+- intent: ask_cancellation_policy
+  examples: |
+    - Chính sách hủy phòng của khách sạn là gì?
+    - Tôi có thể hủy phòng mà không mất phí không?
+    - Thời gian hủy phòng tối thiểu là bao lâu?
+    - Nếu tôi muốn hủy phòng, tôi cần làm gì?
+    - Khách sạn có hoàn tiền khi hủy phòng không?
+    - Chính sách hủy phòng áp dụng như thế nào cho các loại phòng khác nhau?
+    - Tôi có thể hủy phòng đã đặt qua website không?
+    - Hủy phòng có mất phí không?
+    - Nếu tôi hủy phòng sau thời hạn quy định, tôi có mất tiền không?
+
+- intent: ask_contact_reception
+  examples: |
+    - Tôi có thể liên hệ với lễ tân bằng cách nào?
+    - Số điện thoại của lễ tân là gì?
+    - Tôi có thể gửi email cho lễ tân không?
+    - Lễ tân có mặt tại quầy bao lâu?
+    - Có cách nào khác để liên hệ với lễ tân không?
+    - Tôi muốn hỏi lễ tân một số thông tin, tôi nên làm gì?
+    - Có thể nhắn tin cho lễ tân không?
+    - Tôi cần số điện thoại của lễ tân.
+    - Có thể gọi điện cho lễ tân vào giờ nào?
+
+- intent: ask_local_activities
+  examples: |
+    - Có những hoạt động giải trí nào gần đây không?
+    - Tôi có thể làm gì quanh khu vực này?
+    - Bạn có thể giới thiệu cho tôi những hoạt động giải trí gần khách sạn không?
+    - Có địa điểm tham quan nào gần đây không?
+    - Tôi muốn biết về các hoạt động thú vị gần đây.
+    - Có những sự kiện nào đang diễn ra gần đây không?
+    - Tôi có thể tìm thấy các hoạt động gì trong khu vực này?
+    - Có những hoạt động giải trí nào phù hợp cho gia đình không?
+    - Có những hoạt động nào cho người yêu thích thể thao không?
+    - Tôi có thể tham gia các tour du lịch nào gần đây không?
+
+- intent: ask_parking
+  examples: |
+    - Khách sạn có bãi đỗ xe không?
+    - Tôi có thể đỗ xe ở đâu?
+    - Có phí gửi xe không?
+    - Bãi đỗ xe của khách sạn mở cửa giờ nào?
+    - Có chỗ đỗ xe cho khách không?
+    - Tôi cần làm gì để sử dụng bãi đỗ xe?
+    - Bãi đỗ xe có an toàn không?
+    - Có bãi đỗ xe miễn phí không?
+    - Tôi có thể đỗ xe trong thời gian bao lâu?
+    - Có cần đặt chỗ trước cho bãi đỗ xe không?
+
+- intent: ask_dining_options
+  examples: |
+    - Khách sạn có những lựa chọn ăn uống nào ?
+    - Tôi có thể ăn gì tại khách sạn?
+    - Có nhà hàng nào gần đây không?
+    - Có phục vụ bữa sáng không?
+    - Tôi có thể đặt ăn tại phòng không?
+    - Có thực đơn ăn uống cho trẻ em không?
+    - Có quán bar nào trong khách sạn không?
+    - Thời gian phục vụ ăn uống là gì?
+    - Có phục vụ đồ ăn khuya không?
+    - Tôi có thể gọi món ở đâu?
+
+
